@@ -25,7 +25,7 @@ Flayon's access key: replaces the ultimate button with assistance from flayon.
 
 
 FWU(plushies):
-Plushies are obtained when purchasing a sub from a holo mem(up for debate on how this works), plushies allow for a pin of a selected to appear on the first room.
+Plushies are obtained when purchasing a sub from a holo mem(up for debate on how this works), plushies allow for a pin of a selected holomem to appear on the first room, plushies can be changed at the start of evry new zone.
 
 First area:
 The initial area is a ever changing forest filled with dangerous flora and fauna,  normal animals agitated from the recent battle have becomes scared and violent, plant life constitute the traps in the maps, examples being vines that attack you if you get too close, falling fruits and branches, poisonous areas that deals DoT damage, etc, the second type of enemies that are in the forest are marine's fans (Ichimi) that came to the island to loot the libraries, despite the libraries being libraries contain valuable books, they hope to find artifacts and jewelry to impress their captain, the final room of the first area will be a 1 on 1 against Marine herself for the right to board her boat and reach the mainland.

@@ -1,12 +1,23 @@
-A defeated novelite(PLAYER) finds itself in a library, Shiori was arrested by a unknown person, the other novelites seem unresponsive, the PLAYER will attempt to find out who took Shiori away and bring her back as she is the only one that can rehabilitate the others and bring restore their beautiful library, to achieve said task the PLAYER must first find a way out of library which has been semi destroyed and ransacked by unknown attacking forces.
+A defeated novelite(PLAYER) finds itself in a library, Shiori was arrested by a unknown person, the other novelites seem unresponsive, 
+the PLAYER will attempt to find out who took Shiori away and bring her back as she is the only one that can rehabilitate the others and bring restore their beautiful library, 
+to achieve said task the PLAYER must first find a way out of library which has been semi destroyed and ransacked by unknown attacking forces.
+
+
+
 Player items/ weapons:
+
 -Blue Steel Sword: A standard issued weapons among the novelites, the blue steel sword is a medium sized broadblade.
 -Scissors/Twin Blades: The twin blades is an alternatives for those who seek a faster paced combat and watched SAO.
 -Pen and Grimoire: a Weapon normally used by the pages, it provides long range power magic.
--Primum Bookmark: this book mark was initially owned by Shiori, it allowed her to freely move between the present and previously marked moments, effectively going back in time, for a novelites it gives then the ability to return to the library when killed, but since its not begin used by Shiori it does not activate the time reversal.
--Mass-produced bookmark: A mass-produced copy of the Primum bookmark, it allowed a novelite to reconstitute themselves when receiving fatal damage (One of the most common ways to die in the library was falling off the bookcase ladders).
+-Primum Bookmark: this book mark was initially owned by Shiori, it allowed her to freely move between the present and previously marked moments, effectively going back in time, 
+for a novelites it gives then the ability to return to the library when killed, but since its not begin used by Shiori it does not activate the time reversal.
+-Mass-produced bookmark: A mass-produced copy of the Primum bookmark, it allowed a novelite to reconstitute themselves when receiving fatal damage 
+(One of the most common ways to die in the library was falling off the bookcase ladders).
+
+
 
 Pins(WIP):
+
 Kiara pin: Allowes your attack to apply fire damage and other debuffs.
 Gura pin: Pushed enemies back and applied MOIST on enemies /j.
 Pekora pin: Your first attack creates an explosion, the explosion has a cooldown.
@@ -15,38 +26,60 @@ Kanata pin: Applies SMITE on enemies, when max stacks they receive massive damag
 Altare pin: Attacks have a chance to deal double damage or hit twice.
 Iroha pin: Creates a rhythm bar, if attacks are timed correctly they crit.
 choco pin: Applies charm on enemies, decreased defense.
-Mori pin: The first strike on an enemies applies death mark on the enemy, when death mark expires normal enemies either die or have their speed reduced (boss enemies cant die but instead get receive massive damage).
+Mori pin: The first strike on an enemies applies death mark on the enemy, when death mark expires normal enemies either die or have their speed reduced 
+(boss enemies cant die but instead get receive massive damage).
 Ayame pin: Attacks have a chance to drop a will-o’-the-wisp, when picked up it increased your attacked speed, it can stack.
 Hakka pin: Attacks apply talisman, enemies with talisman share a percentage of the damage dealt to them to other enemies with talisman.
-
 
 Kaela's hammer: examples the movement of the equipped weapon.
 Flayon's access key: replaces the ultimate button with assistance from flayon.
 
 
+
 FWU(plushies):
-Plushies are obtained when purchasing a sub from a holo mem(up for debate on how this works), plushies allow for a pin of a selected holomem to appear on the first room, plushies can be changed at the start of evry new zone.
+Plushies are obtained when purchasing a sub from a holo mem(up for debate on how this works), plushies allow for a pin of a selected holomem to appear on the first room, 
+plushies can be changed at the start of evry new zone.
+
+
 
 First area:
-The initial area is a ever changing forest filled with dangerous flora and fauna,  normal animals agitated from the recent battle have becomes scared and violent, plant life constitute the traps in the maps, examples being vines that attack you if you get too close, falling fruits and branches, poisonous areas that deals DoT damage, etc, the second type of enemies that are in the forest are marine's fans (Ichimi) that came to the island to loot the libraries, despite the libraries being libraries contain valuable books, they hope to find artifacts and jewelry to impress their captain, the final room of the first area will be a 1 on 1 against Marine herself for the right to board her boat and reach the mainland.
+The initial area is a ever changing forest filled with dangerous flora and fauna,  normal animals agitated from the recent battle have becomes scared and violent, 
+plant life constitute the traps in the maps, examples being vines that attack you if you get too close, falling fruits and branches, 
+poisonous areas that deals DoT damage, etc, the second type of enemies that are in the forest are marine's fans (Ichimi) that came to the island to loot the libraries, 
+despite the libraries being libraries contain valuable books, they hope to find artifacts and jewelry to impress their captain, 
+the final room of the first area will be a 1 on 1 against Marine herself for the right to board her boat and reach the mainland.
+
 
 Second area:
-If the player managed to beat marine they would be allowed into the ship. In this new map they would constantly get attacked by either Chumbuds/Atlanteans protect the seas, or Raora's forces trying to eliminate any trace of Shiori's forces, on rare occasions they be able to made stop at island where they encounter a random holo member(list not yet decided) that give them some item or buff that help them in their future fights), the final room of the second area is a battle against an one of the mascots of the Justice members.
+If the player managed to beat marine they would be allowed into the ship. In this new map they would constantly get attacked by either Chumbuds/Atlanteans protect the seas, 
+or Raora's forces trying to eliminate any trace of Shiori's forces, on rare occasions they be able to made stop at island where they encounter a 
+random holo member(list not yet decided) that give them some item or buff that help them in their future fights), 
+the final room of the second area is a battle against an one of the mascots of the Justice members.
+
 
 Third area:
-the third area the prison where Shiori and the rest of Advent are held, upon breaking in the sirens will start blaring and the prison forces will be on alert, the prison has many corridors and you don't know which leads to Shiori herself, in some of the corridors you may find the other advent members but some sort of magic prevent you from freeing them (the only way I can BS my way into making this a Shiori only game, if you have more ideas tell me), they instead help you return to the start of the corridors and try again. When you finally reach Shiori's cell, you find her away from her shackles reading a book, she turns to look at you.
+the third area the prison where Shiori and the rest of Advent are held, upon breaking in the sirens will start blaring and the prison forces will be on alert, 
+the prison has many corridors and you don't know which leads to Shiori herself, in some of the corridors you may find the other advent members 
+but some sort of magic prevent you from freeing them (the only way I can BS my way into making this a Shiori only game, if you have more ideas tell me), 
+they instead help you return to the start of the corridors and try again. 
+When you finally reach Shiori's cell, you find her away from her shackles reading a book, she turns to look at you.
+
+
 
 Shiori: oh novelite(Player name), you're finally here, man I can see you had a lot of issue huh.
 Player: SHIORI♡♡♡♡♡!!!!!! wait, Shiori?!?!?! you're free? How? the others were in their shackles.
 Shiori: oh this? i got a bit bored and unmade the magic, I've been reading your journey here, very interesting to say the least.
 Player: What? nvm that for now, if you're then we should return and got the others to help.
-Shiori: oh you naive novelite, i sadly cant do that, if i move too far from here... *the shackles come flying and restrain her, the sirens grow louder now that they now where you are*... that happens.
+Shiori: oh you naive novelite, i sadly cant do that, if i move too far from here... *the shackles come flying and restrain her, 
+the sirens grow louder now that they now where you are*... that happens.
 SPEAKER: Intruder located, cell number #xxxx, all personnel...
 Shiori: oh I forgot that happens（。々°), sowwy *teehee*... she's probably gonna be here any second now.
 Player: who's gonna be here *you get interrupted by Raora breaking thru the wall*
 Dialog in progress...
 
+
 you fight Raora here.
+
 
 If you lose you get absorbed into the Primum bookmark, the bookmark flies into the horizon and you wake up again in the library.
 *a random Shiori voice line plays here*
@@ -57,6 +90,9 @@ Shiori: *as you get hit* Use your other skil...*as you're dying* nvm.
 Shiori: Should have gotten better pins.
 Shiori: *as you get hit* She's distracted!!! *as you're dying* oh she was not distracted.
 
-if you win you try to touch Shiori's lock and get zapped by electricity and die, you get absorbed into the Primum bookmark, the bookmark flies into the horizon and you wake up again in the library.
+
+if you win you try to touch Shiori's lock and get zapped by electricity and die, you get absorbed into the Primum bookmark, 
+the bookmark flies into the horizon and you wake up again in the library.
+
 
 Shiori: oh it does that?

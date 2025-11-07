@@ -1,5 +1,6 @@
 These do not include the passive pins, just those that affect the player's weapon.
 
+
 Kiara pins
 Overall mechanic: attacks apply a burn mark that deals Dot for 3 seconds and expires, it stacks up to X times max.
 • Basic attack: deals damage and applies 1 stack per hit.
@@ -27,7 +28,7 @@ Overall mechanics: explosions.
 • Ultimate: pauses time for a bit and allows you to lock on a missile to a target or area.
 
 
-Sunset pins
+Suisei pins
 Overall mechanics: Deals an additional cleave.
 • Basic attack: deals an extra hit of damage.
 • Special attack:same as basic.

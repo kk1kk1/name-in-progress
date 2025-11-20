@@ -9,6 +9,9 @@ Overall mechanic: attacks apply a burn mark that deals Dot for 3 seconds and exp
 • Infusion: leaves a fire area that deals damage equal to fire DoT, does not apply stacks.
 • ultimate : nukes the whole area dealing high damage and applies 5 stacks.
 
+//  could increase tick duration to 5 seconds and add an increased tick rate on maximum stacks, ultimate should then afflict maximum stacks to all targets hit i think.
+//  we could also increase the maxiumum stack beyond what the ultimate afflicts and make it so when a target reaches maximum stacks all remaining ticks-
+//  are activated for instant instant damage.
 
 Gura pins
 Overall mechanics: displaces enemies on hit.
@@ -18,6 +21,7 @@ Overall mechanics: displaces enemies on hit.
 • Infusion: attacks shoot a water blade for the next X seconds.
 • Ultimate: Sink into the grounds and do the cliche jaws attack.
 
+//  does the special attack also grant limited invulnerability when it pulls enemies towards you, incase they clip your hitbox?
 
 pekora Pins
 Overall mechanics: explosions.
@@ -27,6 +31,8 @@ Overall mechanics: explosions.
 • Infusion: throws grenades around you.
 • Ultimate: pauses time for a bit and allows you to lock on a missile to a target or area.
 
+//  is the bomb applied based on proc chance or every so and so many attacks? 
+//  in the same context, what numbers are higher on the special attack.
 
 Suisei pins
 Overall mechanics: Deals an additional cleave.
@@ -36,6 +42,7 @@ Overall mechanics: Deals an additional cleave.
 • Infusion: gains a damage increase for x seconds.
 • Ultimate: hit enemy with an axe dealing high damage and multiple cleave for the next 5 seconds.
 
+//  cleave as in hits a neighbouring target or is this supposed to hit the same target twice? (or both depending on target location and ammount)
 
 Kanata pins
 Overall mechanics: Build salvation bar and hit enemies with smite.(smite get activated with special)
@@ -45,6 +52,8 @@ Overall mechanics: Build salvation bar and hit enemies with smite.(smite get act
 • Infusion: IDK, please help with this!!!!
 • Ultimate: Spears rain from the sky and gives you two smite hits.
 
+//  i would instead of invisibility opt for a paladin like holy barrier, fitting the smite theme. 
+//  for infusion we could give her a healing ability or increased smite damage for x amounts of smite (unlimited maximum stack smites for x seconds could also be an option)
 
 Altare Pins
 Overall mechanics: chances to deal double damage.
@@ -54,6 +63,8 @@ Overall mechanics: chances to deal double damage.
 • Infusion: increases crit damage.
 • Ultimate: Blade's ultimate from marvel rivals.
 
+//  if we make altare's special theme critical hits can others crit aswell? 
+//  wouldnt it be redundant?
 
 Iroha pins
 Overall mechanics: high attack speed.
@@ -63,6 +74,7 @@ Overall mechanics: high attack speed.
 • Infusion: increases attack speed.
 • Ultimate: huge damage area of sword slashes.
 
+//  we could add a stagger mechanic to bosses for iroha, similiar to dark souls.
 
 Roboco Pins 
 Overall mechanic: chain lighting
@@ -72,15 +84,18 @@ Overall mechanic: chain lighting
 • Infusion: IDK what to add here
 • Ultimate: throws a light rod at an enemy causing them to get striked for X seconds.
 
+//  this is essentially a wow shaman :P
+//  can't think of anything for infusion right now either, so lets come back to this together sometime.
 
 Lamy pins
-Overall mechanics: attack apply slow and free at max stacks.
+Overall mechanics: attack apply slow and freeze at max stacks.    //  corrected free to freeze :3
 • Basic attack: deals damage and applies 1 stack of freeze
 • Special attack: same as basic
 • Dodge: creates a pulse of snow that applies 2 stacks.
 • Infusion: makes a small snow tornado that pulls enemies in.
 • Ultimate: start a blizzard that deals high damage and applies stacks.
 
+//  does the slow increase in duration or percentage slowed per stack? or both.
 
 Noel Pins
 Overall mechanics, slower attack speed but gains a minor stun and highr damage.
@@ -89,3 +104,6 @@ Overall mechanics, slower attack speed but gains a minor stun and highr damage.
 • Dodge: turns into shield block from front facing damage
 • Infusion: decreases enemy defense for X seconds.
 • Ultimate: a mace falls from the sky deals high damage and applies stunning in a wide area for X seconds.
+
+//  probably want to make Basic attacks a chance to stun and special a 100% chance to stun for x seconds.
+//  shield block reduce or negate damage? and how many attacks can it block at once/in short succession.

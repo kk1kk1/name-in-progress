@@ -1,0 +1,9 @@
+// just a text file for me to reference back to as to what i want to work on or rather do first.
+
+
+4 or 8 directional movement   // should talk about this actually
+main attack
+special attack
+dodge/block/parry   //  depends on pins?
+health bar?    //  dunno what kind of health system we want to do
+crit and defensive stat?  //  since we have a crit pin do we even want to make normal attacks be able to crit without it?

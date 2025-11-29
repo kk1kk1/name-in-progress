@@ -9,10 +9,10 @@ Overall mechanic: attacks apply a burn mark that deals Dot for 3 seconds and exp
 • Infusion: leaves a fire area that deals damage equal to fire DoT, does not apply stacks.
 • ultimate : nukes the whole area dealing high damage and applies 5 stacks.
 
-//  could increase tick duration to 5 seconds and add an increased tick rate on maximum stacks, ultimate should then afflict maximum stacks to all targets hiti think.
-//  we could also increase the maxiumum stack beyond what the ultimate afflicts and make it so when a target reaches maximum stacks all remaining ticks-
+//  could increase tick duration to 5 seconds and add an increased tick rate on maximum stacks, ultimate should then afflict maximum stacks to all targets hit i think.
+//  we could also increase the maximum stack beyond what the ultimate afflicts and make it so when a target reaches maximum stacks all remaining ticks-
 //  are activated for instant damage.
-/// I was planning to add extra stacks and the instant activation to passive pins, since she is a phoenix she coudl have a pin or item that gives 1 extra life.
+/// I was planning to add extra stacks and the instant activation to passive pins, since she is a phoenix she could also have a pin or item that gives 1 extra life.
 
 Gura pins
 Overall mechanics: displaces enemies on hit.

@@ -1,4 +1,6 @@
-![GitHub top language](https://img.shields.io/github/languages/top/kk1kk1/name-in-progress?logo=godotengine)
+![Static Badge](https://img.shields.io/badge/Godot-4.5-blue?logo=godotengine)
+![Static Badge](https://img.shields.io/badge/Language-GDScript-Orange?logo=godotengine)
+
 
 *Puts on glasses and programmer socks*
 Time to start working

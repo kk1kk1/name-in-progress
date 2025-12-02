@@ -53,7 +53,7 @@ func set_health(value: int):
 	if clamped_value != health:
 		var difference = clamped_value - health
 		health = value
-		health_changed.emit()
+		health_changed.emit(difference)
 		
 		if health == 0:
 			dead.emit()

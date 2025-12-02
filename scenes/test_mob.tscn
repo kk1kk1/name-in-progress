@@ -1,0 +1,82 @@
+[gd_scene load_steps=12 format=3 uid="uid://b8ssgo32jqumd"]
+
+[ext_resource type="Texture2D" uid="uid://bjcg8uand4lsd" path="res://assets/sprites/Tiny Swords (Free Pack)/Units/Black Units/Warrior/Warrior_Idle.png" id="1_agfyv"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agfyv"]
+radius = 31.0
+height = 84.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bs6nd"]
+atlas = ExtResource("1_agfyv")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28cw0"]
+atlas = ExtResource("1_agfyv")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6uvw"]
+atlas = ExtResource("1_agfyv")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pfjr"]
+atlas = ExtResource("1_agfyv")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qf4sy"]
+atlas = ExtResource("1_agfyv")
+region = Rect2(768, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7bhpf"]
+atlas = ExtResource("1_agfyv")
+region = Rect2(960, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h5vxh"]
+atlas = ExtResource("1_agfyv")
+region = Rect2(1152, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4hijq"]
+atlas = ExtResource("1_agfyv")
+region = Rect2(1344, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7v3rr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bs6nd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28cw0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6uvw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pfjr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qf4sy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7bhpf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h5vxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4hijq")
+}],
+"loop": true,
+"name": &"default",
+"speed": 11.0
+}]
+
+[node name="test_mob" type="RigidBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -2)
+shape = SubResource("CapsuleShape2D_agfyv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7v3rr")
+autoplay = "default"
+frame_progress = 0.52060485

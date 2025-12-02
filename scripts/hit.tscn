@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://beyj1knbbaiq7"]
+
+[ext_resource type="Script" uid="uid://b55n104lnp0h" path="res://hit.gd" id="1_2kk5b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_2kk5b"]
+radius = 7.0
+
+[node name="hit" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_2kk5b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -15)
+shape = SubResource("CapsuleShape2D_2kk5b")

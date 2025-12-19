@@ -22,7 +22,6 @@ size = Vector2(35, 13)
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
-position = Vector2(1090, 751)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 1
@@ -82,7 +81,6 @@ position = Vector2(-1, -2)
 shape = SubResource("CapsuleShape2D_vtaks")
 
 [node name="UiCanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="health_bar" parent="UiCanvasLayer" node_paths=PackedStringArray("character") instance=ExtResource("10_vtaks")]
 offset_left = 5.0

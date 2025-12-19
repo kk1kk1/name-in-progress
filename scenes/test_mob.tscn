@@ -3,8 +3,8 @@
 [ext_resource type="Texture2D" uid="uid://bjcg8uand4lsd" path="res://assets/sprites/Tiny Swords (Free Pack)/Units/Black Units/Warrior/Warrior_Idle.png" id="1_agfyv"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agfyv"]
-radius = 31.0
-height = 84.0
+radius = 16.0
+height = 40.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs6nd"]
 atlas = ExtResource("1_agfyv")
@@ -77,6 +77,8 @@ position = Vector2(-1, -2)
 shape = SubResource("CapsuleShape2D_agfyv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_7v3rr")
 autoplay = "default"
 frame_progress = 0.52060485
+flip_h = true

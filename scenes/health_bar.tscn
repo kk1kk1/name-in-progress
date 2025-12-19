@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://cm6ajfuehgj1m"]
+
+[ext_resource type="Texture2D" uid="uid://dmspoaaxoq5qk" path="res://assets/sprites/Health Bar Asset Pack 2 by Adwit Rahman/Health Bar Asset Pack 2 by Adwit Rahman/HealthBar DARK.png" id="1_1bvlm"]
+[ext_resource type="Script" uid="uid://bgagjswrda6os" path="res://scenes/healthbar.gd" id="2_y3kqx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3kqx"]
+atlas = ExtResource("1_1bvlm")
+region = Rect2(8.827202, 65, 76.68524, 18.315796)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6opq1"]
+atlas = ExtResource("1_1bvlm")
+region = Rect2(28, 90, 56, 4)
+
+[node name="healthbar" type="TextureProgressBar"]
+offset_right = 40.0
+offset_bottom = 40.0
+value = 5.0
+texture_under = SubResource("AtlasTexture_y3kqx")
+texture_progress = SubResource("AtlasTexture_6opq1")
+texture_progress_offset = Vector2(19.2, 7)
+script = ExtResource("2_y3kqx")

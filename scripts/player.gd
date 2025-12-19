@@ -1,50 +1,37 @@
 extends CharacterBody2D
 
-signal hit
+#movement stuff
+var is_dead : bool = false
+@export var SPEED : int = 100	#speed
+var lastfacing : Vector2 = Vector2.DOWN
+var direction : Vector2 = Vector2.ZERO
 
-@export var SPEED = 200.0	#speed
+#animation tree stuff
+@onready var animation_player: AnimationPlayer = $AnimationPlayer
+@onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var animation_tree: AnimationTree = $AnimationTree
+
 
 func get_input(): # The player's movement vector.
-	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	velocity = input_direction * SPEED
+	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
+	
+	velocity = direction * SPEED
 
-func _physics_process(delta: float):
-#	velocity = Vector2.ZERO # The player's movement vector.
+func _physics_process( delta ) ->void:
 	
-#	if Input.is_action_pressed("move_right"):
-#		velocity.x += 1
-#	if Input.is_action_pressed("move_left"):
-#		velocity.x -= 1
-#	if Input.is_action_pressed("move_up"):
-#		velocity.y -= 1
-#	if Input.is_action_pressed("move_down"):
-#		velocity.y += 1	
-#	if velocity.length() > 0:
-#		velocity = velocity.normalized() * SPEED
+	var idle = !velocity
 	
-	# Get the input direction and handle the movement/deceleration.
-	get_input()
-	move_and_slide()
-	
-	
-
-	if velocity.x == 0:		#adds animations
-		$AnimatedSprite2D.animation = "Idle"
+	if !idle:
+		lastfacing = velocity
 		
-	if velocity.x != 0:		
-		$AnimatedSprite2D.animation = "Walk_right"
-		$AnimatedSprite2D.flip_v = false
-		$AnimatedSprite2D.flip_h = velocity.x < 0
-	elif velocity.y != 0:
-		$AnimatedSprite2D.animation = "Walk_right"
-		$AnimatedSprite2D.flip_v = false
-		$AnimatedSprite2D.flip_h = false
-
-
-
+	# Get the input direction and handle the movement
+	if !is_dead:
+		get_input()
+		move_and_slide()
 	
+	# Animation tree
+	animation_tree.set("parameters/Run/blend_position", lastfacing)
+	animation_tree.set("parameters/Idle/blend_position",lastfacing)
 
-
-func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("test")
-	emit_signal("hit")
+func _on_health_dead(): #death
+	is_dead = true

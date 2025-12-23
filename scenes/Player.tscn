@@ -299,8 +299,8 @@ script = ExtResource("1_v6fml")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 z_index = 12
-position = Vector2(0, -15)
-zoom = Vector2(2, 2)
+position = Vector2(1, -15)
+zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

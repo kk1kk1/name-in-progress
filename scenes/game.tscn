@@ -65,7 +65,8 @@ tile_map_data = PackedByteArray("AAADAAAAAQADAAMAAAD9/wEAAQADAAMAAAD9//v/AQADAAM
 tile_set = ExtResource("8_gee14")
 
 [node name="test_mob" parent="." instance=ExtResource("6_p57ef")]
-z_index = 20
+z_index = 1
+y_sort_enabled = true
 position = Vector2(516, 106)
 collision_layer = 4
 collision_mask = 2
@@ -102,7 +103,7 @@ position = Vector2(121, -129)
 texture = ExtResource("11_kvpfn")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
-polygon = PackedVector2Array(-11, -56, -4, -42, 11, -34, 33, -36, 47, -36, 60, -33, 90, -28, 100, -27, 99, -38, 143, -38, 142, -25, 152, -27, 171, -31, 190, -34, 198, -38, 209, -37, 224, -34, 244, -41, 253, -53, 258, -75, -15, -76)
+polygon = PackedVector2Array(-11, -56, -4, -42, 11, -34, 33, -36, 47, -36, 60, -33, 90, -28, 100, -27, 99, -38, 143, -38, 142, -25, 152, -27, 171, -31, 190, -34, 198, -38, 209, -37, 224, -34, 244, -41, 253, -53, 258, -75, -25, -75)
 
 [node name="Through door" type="Area2D" parent="."]
 visible = false
@@ -111,6 +112,12 @@ position = Vector2(-157, -235)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Through door"]
 position = Vector2(-1, 10)
 shape = SubResource("RectangleShape2D_kvpfn")
+
+[node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+position = Vector2(-482, 19.000015)
+rotation = -2.509434
+energy = 0.4
+shadow_enabled = true
 
 [connection signal="dead" from="Player/Health" to="Player" method="_on_health_dead"]
 [connection signal="area_entered" from="Player/Hitbox" to="Player" method="_on_hitbox_area_entered"]

@@ -1,12 +1,18 @@
 extends CharacterBody2D
 
-#movement stuff
+#death flag
 var is_dead : bool = false
+
+#--------------------------------------------------------------------------------------------------
+
+#movement variables
 @export var SPEED : int = 100	#speed
 var lastfacing : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
 
-#animation tree stuff
+#--------------------------------------------------------------------------------------------------
+
+#animation tree
 
 #placeholder
 #@onready var animation_player: AnimationPlayer = $AnimationPlaceholder
@@ -18,32 +24,42 @@ var direction : Vector2 = Vector2.ZERO
 @onready var sprite_2d: Sprite2D = $Novelite
 @onready var animation_tree: AnimationTree = $NoveliteTree
 
+#--------------------------------------------------------------------------------------------------
 
-func get_input(): # The player's movement vector.
+#players movement function
+func get_input():
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
 	velocity = direction * SPEED
 
+#--------------------------------------------------------------------------------------------------
+
+#active process
 func _physics_process( delta ) ->void:
 	
+#idle variable
 	var idle = !velocity
 	
+#idle direction save
 	if !idle:
 		lastfacing = velocity
 		
-	# Get the input direction and handle the movement
+# checks if death flag is set and gets input for movement
 	if !is_dead:
 		get_input()
 		move_and_slide()
 	
-	# Animation tree
+# Animation tree
 	
-	#placeholder
+#placeholder
 	#animation_tree.set("parameters/Run/blend_position", lastfacing)
 	#animation_tree.set("parameters/Idle/blend_position",lastfacing)
 	
-	#novelite
+#novelite
 	animation_tree.set("parameters/Walk/blend_position", lastfacing)
-	
-func _on_health_dead(): #death
+
+#--------------------------------------------------------------------------------------------------
+
+#set death flag
+func _on_health_dead():
 	is_dead = true

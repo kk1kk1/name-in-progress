@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=3 uid="uid://cmchiubak8lll"]
+[gd_scene load_steps=51 format=3 uid="uid://cmchiubak8lll"]
 
 [ext_resource type="Script" uid="uid://btuk4t1ki83yi" path="res://scripts/player.gd" id="1_v6fml"]
 [ext_resource type="Texture2D" uid="uid://b8eo4pywjpwty" path="res://assets/sprites/addons/SimpleCharacter/Girl-Sheet.png" id="3_3li8b"]
@@ -376,9 +376,13 @@ tracks/1/keys = {
 "values": [true]
 }
 
+[sub_resource type="Animation" id="Animation_srp4u"]
+resource_name = "attack right"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0rnld"]
 _data = {
 &"RESET": SubResource("Animation_p7iby"),
+&"attack right": SubResource("Animation_srp4u"),
 &"walk_left": SubResource("Animation_0rnld"),
 &"walk_right": SubResource("Animation_lkdrv")
 }

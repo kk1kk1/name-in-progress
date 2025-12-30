@@ -7,9 +7,16 @@ var lastfacing : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
 
 #animation tree stuff
-@onready var animation_player: AnimationPlayer = $AnimationPlayer
-@onready var sprite_2d: Sprite2D = $Sprite2D
-@onready var animation_tree: AnimationTree = $AnimationTree
+
+#placeholder
+#@onready var animation_player: AnimationPlayer = $AnimationPlaceholder
+#@onready var sprite_2d: Sprite2D = $Placeholder
+#@onready var animation_tree: AnimationTree = $AnimationTreeplaceholder
+
+#Novelite
+@onready var animation_player: AnimationPlayer = $Animationnocvelite
+@onready var sprite_2d: Sprite2D = $Novelite
+@onready var animation_tree: AnimationTree = $NoveliteTree
 
 
 func get_input(): # The player's movement vector.
@@ -30,8 +37,13 @@ func _physics_process( delta ) ->void:
 		move_and_slide()
 	
 	# Animation tree
-	animation_tree.set("parameters/Run/blend_position", lastfacing)
-	animation_tree.set("parameters/Idle/blend_position",lastfacing)
-
+	
+	#placeholder
+	#animation_tree.set("parameters/Run/blend_position", lastfacing)
+	#animation_tree.set("parameters/Idle/blend_position",lastfacing)
+	
+	#novelite
+	animation_tree.set("parameters/Walk/blend_position", lastfacing)
+	
 func _on_health_dead(): #death
 	is_dead = true

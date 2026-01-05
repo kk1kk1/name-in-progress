@@ -30,6 +30,8 @@ disable_mode = 1
 collision_mask = 2
 motion_mode = 1
 safe_margin = 1.0
+SPEED = 60
+RUNSPEED = 120
 
 [node name="Health" type="Node" parent="Player"]
 script = ExtResource("2_u5sy4")

@@ -7,9 +7,10 @@ var is_dead : bool = false
 
 #movement variables
 @export var SPEED : int = 100	#speed
+@export var RUNSPEED : int = 200
 var lastfacing : Vector2 = Vector2.DOWN
 var direction : Vector2 = Vector2.ZERO
-
+var run : bool = false
 #--------------------------------------------------------------------------------------------------
 
 #animation tree
@@ -29,10 +30,25 @@ var direction : Vector2 = Vector2.ZERO
 #players movement function
 func get_input():
 	direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	
-	velocity = direction * SPEED
+	if(run == true):
+		velocity = direction * RUNSPEED
+	else:
+		velocity = direction * SPEED
 
 #--------------------------------------------------------------------------------------------------
+
+func is_running():
+	if(Input.is_action_just_pressed("run")): 
+		run = true
+	if(Input.is_action_just_released("run")):
+		run = false
+
+func toggle_run():
+	if(Input.is_action_just_pressed("run_toggle")):
+		if(run == false):
+			run = true
+		else:
+			run = false
 
 #active process
 func _physics_process( delta ) ->void:
@@ -46,6 +62,8 @@ func _physics_process( delta ) ->void:
 		
 # checks if death flag is set and gets input for movement
 	if !is_dead:
+		is_running()
+		toggle_run()
 		get_input()
 		move_and_slide()
 	

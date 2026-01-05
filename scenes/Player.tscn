@@ -291,35 +291,6 @@ states/Run/position = Vector2(381, 14)
 transitions = ["Start", "Run", SubResource("AnimationNodeStateMachineTransition_v6fml"), "Run", "Idle", SubResource("AnimationNodeStateMachineTransition_3li8b"), "Idle", "Run", SubResource("AnimationNodeStateMachineTransition_mdl7e"), "Run", "Death", SubResource("AnimationNodeStateMachineTransition_0rnld"), "Idle", "Death", SubResource("AnimationNodeStateMachineTransition_srp4u")]
 graph_offset = Vector2(0, -63.901226)
 
-[sub_resource type="Animation" id="Animation_lkdrv"]
-resource_name = "walk_right"
-length = 1.2
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Novelite:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
-"update": 1,
-"values": [0, 1, 2, 3, 4, 5, 6, 7]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Novelite:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
 [sub_resource type="Animation" id="Animation_p7iby"]
 length = 0.001
 tracks/0/type = "value"
@@ -346,6 +317,9 @@ tracks/1/keys = {
 "update": 1,
 "values": [true]
 }
+
+[sub_resource type="Animation" id="Animation_srp4u"]
+resource_name = "attack right"
 
 [sub_resource type="Animation" id="Animation_0rnld"]
 resource_name = "walk_left"
@@ -376,8 +350,34 @@ tracks/1/keys = {
 "values": [true]
 }
 
-[sub_resource type="Animation" id="Animation_srp4u"]
-resource_name = "attack right"
+[sub_resource type="Animation" id="Animation_lkdrv"]
+resource_name = "walk_right"
+length = 1.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Novelite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.3, 0.45, 0.6, 0.75, 0.9, 1.05),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Novelite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0rnld"]
 _data = {

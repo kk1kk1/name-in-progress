@@ -116,6 +116,7 @@ position = Vector2(-1, 10)
 shape = SubResource("RectangleShape2D_kvpfn")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
+visible = false
 position = Vector2(-482, 19.000015)
 rotation = -2.509434
 energy = 0.4

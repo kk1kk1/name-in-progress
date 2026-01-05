@@ -1,15 +1,52 @@
-[gd_scene load_steps=4 format=4 uid="uid://b6waxssff5wu5"]
+[gd_scene load_steps=8 format=4 uid="uid://b6waxssff5wu5"]
 
 [ext_resource type="PackedScene" uid="uid://cmchiubak8lll" path="res://scenes/Player.tscn" id="1_ubp1v"]
 [ext_resource type="TileSet" uid="uid://3ooi4fbwk4np" path="res://scenes/Map.tres" id="2_c4wp1"]
 
+[sub_resource type="Gradient" id="Gradient_c4wp1"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_fpimf"]
+gradient = SubResource("Gradient_c4wp1")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.8317757, 0.17289719)
+
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_c4wp1"]
 
+[sub_resource type="Gradient" id="Gradient_fpimf"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_0wj4k"]
+gradient = SubResource("Gradient_fpimf")
+width = 62
+height = 70
+fill = 1
+fill_from = Vector2(0.5, 0.55140185)
+fill_to = Vector2(0.499, 0.009)
+
 [node name="Dungeon" type="Node2D"]
+y_sort_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_ubp1v")]
 position = Vector2(536, 356)
 collision_mask = 2
+
+[node name="PointLight2D" type="PointLight2D" parent="Player"]
+y_sort_enabled = true
+position = Vector2(-2.3841858e-07, -3.0000029)
+scale = Vector2(3.585, 3.585)
+shadow_enabled = true
+texture = SubResource("GradientTexture2D_fpimf")
+texture_scale = 0.7
+
+[node name="PointLight2D2" type="PointLight2D" parent="Player"]
+y_sort_enabled = true
+position = Vector2(-2.3841858e-07, -3.0000029)
+scale = Vector2(3.585, 3.585)
+energy = 0.5
+texture = SubResource("GradientTexture2D_fpimf")
+texture_scale = 0.7
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 position = Vector2(536, 356)
@@ -17,6 +54,7 @@ tile_map_data = PackedByteArray("AAD+//7/AgAGAAAAAAABAP7/AgAHAAAAAAD+////AgAGAAI
 tile_set = ExtResource("2_c4wp1")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="TileMapLayer"]
+y_sort_enabled = true
 position = Vector2(-11, 0)
 tile_map_data = PackedByteArray("AADu//z/AQAAAAMAAADq//z/AQAAAAMAAAD2//z/AQAAAAMAAAD1//z/AQAAAAAAAADo//v/AQABAAAAAADy//z/AQAAAAMAAAADAAIAAQAAAAMAAAAGAAIAAQAAAAMAAAD2/wIAAQAAAAMAAAD9/wIAAQAAAAMAAAANAAIAAQAAAAMAAAD6/wIAAQAAAAMAAQDv/wIAAQAAAAMAAADs/wIAAQAAAAMAAQDo/wIAAQAAAAMAAADl/wIAAQAAAAMAAQAFAPv/AQAAAAMAAAAOAPv/AQAAAAMAAAAKAPv/AQAAAAMAAQDh/wIAAQAAAAMAAAAFAPz/AQABAAEAAAAOAP//AQACAAEAAAANAP//AQACAAEAAAANAPz/AQAEAAAAAAAFAP//AQAAAAEAAAAGAPv/AQAAAAAAAAAMAPv/AQAAAAAAAAAOAAIAAQAAAAAAAAD7/wIAAQAAAAAAAADt/wIAAQAAAAAAAADj/wIAAQAAAAAAAAA=")
 tile_set = ExtResource("2_c4wp1")
@@ -33,5 +71,172 @@ height = 89.0
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="."]
 visible = false
 position = Vector2(545, -123)
-energy = 0.44
+energy = 0.82
 blend_mode = 1
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color(0.20713806, 0.2323824, 0.29296875, 1)
+
+[node name="torches" type="Node" parent="."]
+
+[node name="PointLight2D" type="PointLight2D" parent="torches"]
+position = Vector2(465, 412)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D2" type="PointLight2D" parent="torches"]
+position = Vector2(381, 422.00003)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D3" type="PointLight2D" parent="torches"]
+position = Vector2(610, 412)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D4" type="PointLight2D" parent="torches"]
+position = Vector2(681, 411)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D5" type="PointLight2D" parent="torches"]
+position = Vector2(849, 411.00003)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D6" type="PointLight2D" parent="torches"]
+position = Vector2(873, 242)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D7" type="PointLight2D" parent="torches"]
+position = Vector2(764, 242)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D8" type="PointLight2D" parent="torches"]
+position = Vector2(657, 242)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D9" type="PointLight2D" parent="torches"]
+position = Vector2(297, 266)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D10" type="PointLight2D" parent="torches"]
+position = Vector2(200.99998, 267)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D11" type="PointLight2D" parent="torches"]
+position = Vector2(105, 266)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D12" type="PointLight2D" parent="torches"]
+position = Vector2(9, 266)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D13" type="PointLight2D" parent="torches"]
+position = Vector2(129, 410)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D14" type="PointLight2D" parent="torches"]
+position = Vector2(45, 410.00003)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D15" type="PointLight2D" parent="torches"]
+position = Vector2(-40, 410)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D16" type="PointLight2D" parent="torches"]
+position = Vector2(-123, 410.00003)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D17" type="PointLight2D" parent="torches"]
+position = Vector2(-208, 410.00003)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5
+
+[node name="PointLight2D18" type="PointLight2D" parent="torches"]
+position = Vector2(297, 410.00003)
+scale = Vector2(1.8906255, 2.4218752)
+color = Color(0.97265625, 0.812219, 0.5357208, 1)
+energy = 1.9
+blend_mode = 2
+texture = SubResource("GradientTexture2D_0wj4k")
+texture_scale = 1.5

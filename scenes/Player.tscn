@@ -1,4 +1,4 @@
-[gd_scene load_steps=51 format=3 uid="uid://cmchiubak8lll"]
+[gd_scene load_steps=58 format=3 uid="uid://cmchiubak8lll"]
 
 [ext_resource type="Script" uid="uid://btuk4t1ki83yi" path="res://scripts/player.gd" id="1_v6fml"]
 [ext_resource type="Texture2D" uid="uid://b8eo4pywjpwty" path="res://assets/sprites/addons/SimpleCharacter/Girl-Sheet.png" id="3_3li8b"]
@@ -379,13 +379,19 @@ tracks/1/keys = {
 "values": [false]
 }
 
+[sub_resource type="Animation" id="Animation_jfpux"]
+resource_name = "running"
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0rnld"]
 _data = {
 &"RESET": SubResource("Animation_p7iby"),
 &"attack right": SubResource("Animation_srp4u"),
+&"running": SubResource("Animation_jfpux"),
 &"walk_left": SubResource("Animation_0rnld"),
 &"walk_right": SubResource("Animation_lkdrv")
 }
+
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_3li8b"]
 
 [sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_srp4u"]
 animation = &"walk_left"
@@ -420,14 +426,36 @@ blend_point_5/node = SubResource("AnimationNodeAnimation_sfy4j")
 blend_point_5/pos = Vector2(-0.3, -1)
 blend_mode = 1
 
+[sub_resource type="AnimationNodeBlendSpace2D" id="AnimationNodeBlendSpace2D_61ith"]
+
 [sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_gv3ic"]
 advance_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ebwui"]
+advance_mode = 2
+advance_expression = "run == true"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_qu4a1"]
+advance_mode = 2
+advance_expression = "run == false"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_70d11"]
+advance_mode = 2
+advance_expression = "velocity"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cw2d6"]
+advance_mode = 2
+advance_expression = "!velocity"
+
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_b8lor"]
+states/Idle/node = SubResource("AnimationNodeBlendSpace2D_3li8b")
+states/Idle/position = Vector2(346, 190)
 states/Start/position = Vector2(190, 100)
 states/Walk/node = SubResource("AnimationNodeBlendSpace2D_sfy4j")
 states/Walk/position = Vector2(346, 100)
-transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_gv3ic")]
+states/running/node = SubResource("AnimationNodeBlendSpace2D_61ith")
+states/running/position = Vector2(346, 13)
+transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_gv3ic"), "Walk", "running", SubResource("AnimationNodeStateMachineTransition_ebwui"), "running", "Walk", SubResource("AnimationNodeStateMachineTransition_qu4a1"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_70d11"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_cw2d6")]
 graph_offset = Vector2(-180, -8)
 
 [node name="Player" type="CharacterBody2D"]
@@ -481,4 +509,6 @@ libraries = {
 tree_root = SubResource("AnimationNodeStateMachine_b8lor")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../Animationnocvelite")
+parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(-0.499, -0.112)
+parameters/running/blend_position = Vector2(0, 0)

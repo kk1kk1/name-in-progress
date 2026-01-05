@@ -37,6 +37,7 @@ func get_input():
 
 #--------------------------------------------------------------------------------------------------
 
+#running
 func is_running():
 	if(Input.is_action_just_pressed("run")): 
 		run = true
@@ -49,6 +50,8 @@ func toggle_run():
 			run = true
 		else:
 			run = false
+
+#--------------------------------------------------------------------------------------------------
 
 #active process
 func _physics_process( delta ) ->void:

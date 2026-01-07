@@ -1,5 +1,6 @@
-[gd_scene load_steps=12 format=4 uid="uid://8c84nk83u1q4"]
+[gd_scene load_steps=13 format=4 uid="uid://8c84nk83u1q4"]
 
+[ext_resource type="Script" uid="uid://b7p4jni1i8vdf" path="res://scenes/game.gd" id="1_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cmchiubak8lll" path="res://scenes/Player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://crwsmcvkttvqj" path="res://scripts/player_health.gd" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://qtblo04hvwsg" path="res://scenes/hitbox.tscn" id="3_gee14"]
@@ -22,6 +23,7 @@ size = Vector2(35, 13)
 
 [node name="Game" type="Node2D"]
 y_sort_enabled = true
+script = ExtResource("1_0tnpc")
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 z_index = 1
@@ -108,8 +110,7 @@ texture = ExtResource("11_kvpfn")
 polygon = PackedVector2Array(-11, -56, -4, -42, 11, -34, 33, -36, 47, -36, 60, -33, 90, -28, 100, -27, 99, -38, 143, -38, 142, -25, 152, -27, 171, -31, 190, -34, 198, -38, 209, -37, 224, -34, 244, -41, 253, -53, 258, -75, -25, -75)
 
 [node name="Through door" type="Area2D" parent="."]
-visible = false
-position = Vector2(-157, -235)
+position = Vector2(518, -45)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Through door"]
 position = Vector2(-1, 10)
@@ -124,3 +125,4 @@ shadow_enabled = true
 
 [connection signal="dead" from="Player/Health" to="Player" method="_on_health_dead"]
 [connection signal="area_entered" from="Player/Hitbox" to="Player" method="_on_hitbox_area_entered"]
+[connection signal="body_entered" from="Through door" to="." method="_on_through_door_body_entered"]

@@ -321,6 +321,9 @@ tracks/1/keys = {
 [sub_resource type="Animation" id="Animation_srp4u"]
 resource_name = "attack right"
 
+[sub_resource type="Animation" id="Animation_jfpux"]
+resource_name = "running"
+
 [sub_resource type="Animation" id="Animation_0rnld"]
 resource_name = "walk_left"
 length = 1.2
@@ -378,9 +381,6 @@ tracks/1/keys = {
 "update": 1,
 "values": [false]
 }
-
-[sub_resource type="Animation" id="Animation_jfpux"]
-resource_name = "running"
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_0rnld"]
 _data = {
@@ -475,7 +475,6 @@ position = Vector2(0, -1)
 shape = SubResource("CapsuleShape2D_t53lx")
 
 [node name="Placeholder" type="Sprite2D" parent="."]
-visible = false
 y_sort_enabled = true
 position = Vector2(0, -12)
 texture = ExtResource("3_3li8b")
@@ -494,6 +493,7 @@ parameters/Idle/blend_position = Vector2(-0.07496011, 0.25560546)
 parameters/Run/blend_position = Vector2(-0.49601275, -0.4977578)
 
 [node name="Novelite" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1, -13)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("3_mdl7e")

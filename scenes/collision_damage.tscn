@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://c16pykjyfrwth"]
-
-[ext_resource type="Script" uid="uid://boggr2ldy80uo" path="res://scripts/collisiondamage.gd" id="1_g47us"]
-
-[node name="CollisionDamage" type="Area2D"]
-script = ExtResource("1_g47us")

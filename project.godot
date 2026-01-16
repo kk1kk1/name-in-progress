@@ -11,7 +11,6 @@ config_version=5
 [application]
 
 config/name="name-in-progress"
-run/main_scene="uid://8c84nk83u1q4"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://assets/icon.svg"
 

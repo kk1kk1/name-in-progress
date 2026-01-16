@@ -1,11 +1,13 @@
-[gd_scene load_steps=13 format=4 uid="uid://8c84nk83u1q4"]
+[gd_scene load_steps=15 format=4 uid="uid://8c84nk83u1q4"]
 
 [ext_resource type="Script" uid="uid://b7p4jni1i8vdf" path="res://scenes/game.gd" id="1_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cmchiubak8lll" path="res://scenes/Player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://crwsmcvkttvqj" path="res://scripts/player_health.gd" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://qtblo04hvwsg" path="res://scenes/hitbox.tscn" id="3_gee14"]
 [ext_resource type="PackedScene" uid="uid://b8ssgo32jqumd" path="res://scenes/test_mob.tscn" id="6_p57ef"]
+[ext_resource type="Script" uid="uid://28ufuec4y5j7" path="res://scripts/test_mob.gd" id="7_vtaks"]
 [ext_resource type="TileSet" uid="uid://3ooi4fbwk4np" path="res://scenes/Map.tres" id="8_gee14"]
+[ext_resource type="Resource" uid="uid://dmbx0qyeifwjx" path="res://Ressources/sword_enemy.tres" id="8_kvpfn"]
 [ext_resource type="PackedScene" uid="uid://c16pykjyfrwth" path="res://scenes/collision_damage.tscn" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cm6ajfuehgj1m" path="res://scenes/health_bar.tscn" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://4e00qh32c72g" path="res://assets/sprites/Tiny Swords (Free Pack)/Buildings/Black Buildings/Castle.png" id="11_kvpfn"]
@@ -75,11 +77,13 @@ position = Vector2(516, 106)
 collision_layer = 4
 collision_mask = 2
 gravity_scale = 0.0
+script = ExtResource("7_vtaks")
+enemy_stats = ExtResource("8_kvpfn")
 
 [node name="CollisionDamage" parent="test_mob" instance=ExtResource("9_0tnpc")]
 collision_layer = 8
 collision_mask = 0
-damage = 20
+damage = 80
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="test_mob/CollisionDamage"]
 position = Vector2(-1, -2)
@@ -96,6 +100,7 @@ scale = Vector2(2, 2)
 size_flags_horizontal = 0
 size_flags_vertical = 8
 character = NodePath("../../Player")
+metadata/_edit_use_anchors_ = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(396, 2)

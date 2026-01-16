@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="enemy_type" load_steps=2 format=3 uid="uid://dmbx0qyeifwjx"]
+
+[ext_resource type="Script" uid="uid://chfpj6hoagx17" path="res://Ressources/enemy_resource.gd" id="1_f7cvh"]
+
+[resource]
+script = ExtResource("1_f7cvh")
+damage = 20
+health = 20
+collision_damage = 50
+movement_speed = 20.0
+movement_range = 500.0
+metadata/_custom_type_script = "uid://chfpj6hoagx17"

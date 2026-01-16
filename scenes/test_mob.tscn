@@ -2,9 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bjcg8uand4lsd" path="res://assets/sprites/Tiny Swords (Free Pack)/Units/Black Units/Warrior/Warrior_Idle.png" id="1_agfyv"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_agfyv"]
-radius = 16.0
-height = 40.0
+[sub_resource type="CircleShape2D" id="CircleShape2D_agfyv"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bs6nd"]
 atlas = ExtResource("1_agfyv")
@@ -71,10 +69,13 @@ animations = [{
 }]
 
 [node name="test_mob" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, -2)
-shape = SubResource("CapsuleShape2D_agfyv")
+position = Vector2(0, 16)
+scale = Vector2(1, 0.5)
+shape = SubResource("CircleShape2D_agfyv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.5, 0.5)

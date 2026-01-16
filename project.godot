@@ -61,7 +61,13 @@ run_toggle={
 
 2d_physics/layer_1="Player"
 
+[physics]
+
+2d/run_on_separate_thread=true
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-rendering_device/driver="D3D12"
+rendering_device/driver="d3d12"
+rendering_device/driver.windows="d3d12"
+viewport/hdr_2d=true

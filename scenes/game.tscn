@@ -36,7 +36,7 @@ disable_mode = 1
 collision_mask = 2
 motion_mode = 1
 safe_margin = 1.0
-zoom = Vector2(3, 3)
+zoom = Vector2(4, 4)
 SPEED = 60
 RUNSPEED = 120
 

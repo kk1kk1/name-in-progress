@@ -470,12 +470,13 @@ script = ExtResource("1_ys5p8")
 
 [node name="Player" parent="." unique_id=1842491252 instance=ExtResource("1_ubp1v")]
 position = Vector2(536, 368)
+scale = Vector2(0.2, 0.2)
 collision_mask = 2
 
 [node name="PointLight2D" type="PointLight2D" parent="Player" unique_id=297549873]
 y_sort_enabled = true
 position = Vector2(-2.3841858e-07, -3.0000029)
-scale = Vector2(3.585, 3.585)
+scale = Vector2(9.83, 9.83)
 shadow_enabled = true
 texture = SubResource("GradientTexture2D_fpimf")
 texture_scale = 0.7
@@ -483,7 +484,7 @@ texture_scale = 0.7
 [node name="PointLight2D2" type="PointLight2D" parent="Player" unique_id=1512973903]
 y_sort_enabled = true
 position = Vector2(-2.3841858e-07, -3.0000029)
-scale = Vector2(3.585, 3.585)
+scale = Vector2(14.025, 14.025)
 energy = 0.5
 texture = SubResource("GradientTexture2D_fpimf")
 texture_scale = 0.7

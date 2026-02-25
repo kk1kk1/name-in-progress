@@ -80,7 +80,6 @@ text = "Placeholder Name"
 horizontal_alignment = 1
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Label" unique_id=491827317]
-visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -117,6 +116,7 @@ action_mode = 0
 text = "Exit"
 
 [node name="Optionsgrid" type="GridContainer" parent="Label" unique_id=2994796]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5

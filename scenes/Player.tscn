@@ -1,12 +1,12 @@
-[gd_scene load_steps=58 format=3 uid="uid://cmchiubak8lll"]
+[gd_scene format=3 uid="uid://cmchiubak8lll"]
 
 [ext_resource type="Script" uid="uid://btuk4t1ki83yi" path="res://scripts/player.gd" id="1_v6fml"]
 [ext_resource type="Texture2D" uid="uid://b8eo4pywjpwty" path="res://assets/sprites/addons/SimpleCharacter/Girl-Sheet.png" id="3_3li8b"]
 [ext_resource type="Texture2D" uid="uid://cdniueuet04vf" path="res://assets/sprites/Walk(pre)/Walk(pre).png" id="3_mdl7e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t53lx"]
-radius = 3.0
-height = 6.0
+radius = 22.0
+height = 44.0
 
 [sub_resource type="Animation" id="Animation_o4126"]
 resource_name = "Death"
@@ -458,54 +458,48 @@ states/running/position = Vector2(346, 13)
 transitions = ["Start", "Walk", SubResource("AnimationNodeStateMachineTransition_gv3ic"), "Walk", "running", SubResource("AnimationNodeStateMachineTransition_ebwui"), "running", "Walk", SubResource("AnimationNodeStateMachineTransition_qu4a1"), "Idle", "Walk", SubResource("AnimationNodeStateMachineTransition_70d11"), "Walk", "Idle", SubResource("AnimationNodeStateMachineTransition_cw2d6")]
 graph_offset = Vector2(-180, -8)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=2111415313]
 z_index = 10
 y_sort_enabled = true
 collision_mask = 0
 script = ExtResource("1_v6fml")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1186526887]
 z_index = 12
 position = Vector2(1, -15)
-zoom = Vector2(3, 3)
 position_smoothing_enabled = true
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -1)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1444650466]
+position = Vector2(0, -18)
 shape = SubResource("CapsuleShape2D_t53lx")
 
-[node name="Placeholder" type="Sprite2D" parent="."]
+[node name="Placeholder" type="Sprite2D" parent="." unique_id=1585530771]
 visible = false
 y_sort_enabled = true
 position = Vector2(0, -12)
 texture = ExtResource("3_3li8b")
 hframes = 44
 
-[node name="AnimationPlaceholder" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_70d11")
-}
+[node name="AnimationPlaceholder" type="AnimationPlayer" parent="." unique_id=1888268005]
+libraries/ = SubResource("AnimationLibrary_70d11")
 
-[node name="AnimationTreeplaceholder" type="AnimationTree" parent="."]
+[node name="AnimationTreeplaceholder" type="AnimationTree" parent="." unique_id=1943881133]
 tree_root = SubResource("AnimationNodeStateMachine_cw2d6")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../AnimationPlaceholder")
 parameters/Idle/blend_position = Vector2(-0.07496011, 0.25560546)
 parameters/Run/blend_position = Vector2(-0.49601275, -0.4977578)
 
-[node name="Novelite" type="Sprite2D" parent="."]
-position = Vector2(1, -13)
-scale = Vector2(0.2, 0.2)
+[node name="Novelite" type="Sprite2D" parent="." unique_id=437701867]
+position = Vector2(-12, -64)
 texture = ExtResource("3_mdl7e")
 flip_h = true
 hframes = 8
 
-[node name="Animationnocvelite" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_0rnld")
-}
+[node name="Animationnocvelite" type="AnimationPlayer" parent="." unique_id=1897153267]
+libraries/ = SubResource("AnimationLibrary_0rnld")
 
-[node name="NoveliteTree" type="AnimationTree" parent="."]
+[node name="NoveliteTree" type="AnimationTree" parent="." unique_id=1900554483]
 tree_root = SubResource("AnimationNodeStateMachine_b8lor")
 advance_expression_base_node = NodePath("..")
 anim_player = NodePath("../Animationnocvelite")

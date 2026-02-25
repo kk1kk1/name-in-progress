@@ -7,6 +7,7 @@ var is_dead : bool = false
 #--------------------------------------------------------------------------------------------------
 
 #movement variables
+@export var zoom : Vector2
 @export var SPEED : int = 100	#speed
 @export var RUNSPEED : int = 200
 var lastfacing : Vector2 = Vector2.DOWN
@@ -56,6 +57,9 @@ func toggle_run():
 
 #active process
 func _physics_process( delta ) ->void:
+	
+#camera zoom
+	$Camera2D.set_zoom(zoom)
 	
 #idle variable
 	var idle = !velocity

@@ -14,8 +14,8 @@
 [ext_resource type="AudioStream" uid="uid://bj0kvil3tbuwr" path="res://assets/Music/Departure.mp3" id="12_dinhu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gee14"]
-radius = 5.0
-height = 18.0
+radius = 20.0
+height = 123.99991
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtaks"]
 radius = 16.0
@@ -31,10 +31,12 @@ script = ExtResource("1_0tnpc")
 [node name="Player" parent="." unique_id=535089617 instance=ExtResource("1_uwrxv")]
 z_index = 1
 position = Vector2(-125, -42)
+scale = Vector2(0.2, 0.2)
 disable_mode = 1
 collision_mask = 2
 motion_mode = 1
 safe_margin = 1.0
+zoom = Vector2(3, 3)
 SPEED = 60
 RUNSPEED = 120
 
@@ -49,7 +51,7 @@ collision_mask = 8
 health = NodePath("../Health")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Hitbox" unique_id=1769021931]
-position = Vector2(0, -7)
+position = Vector2(0, -61.99997)
 shape = SubResource("CapsuleShape2D_gee14")
 
 [node name="Map" type="TileMapLayer" parent="." unique_id=1807095886]

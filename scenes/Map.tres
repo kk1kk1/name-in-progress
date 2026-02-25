@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=35 format=3 uid="uid://3ooi4fbwk4np"]
+[gd_resource type="TileSet" format=3 uid="uid://3ooi4fbwk4np"]
 
 [ext_resource type="Texture2D" uid="uid://bbqytpklmsdqk" path="res://assets/sprites/addons/P_P_FREE_RPG_TILESET/Island_24x24.png" id="1_4s5p8"]
 [ext_resource type="Texture2D" uid="uid://dk2lf87l5pe4c" path="res://assets/sprites/addons/P_P_FREE_RPG_TILESET/decor.png" id="2_3qnt2"]

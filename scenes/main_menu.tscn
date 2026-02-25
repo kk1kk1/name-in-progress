@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://qlravh6mkdjw"]
+
+[ext_resource type="Script" uid="uid://e3sat5gqg5e5" path="res://scenes/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://dwer2n07lterh" path="res://assets/images/21967857-forest-6578551_1920.jpg" id="1_l6cm7"]
+[ext_resource type="PackedScene" uid="uid://dryqw021l1kyg" path="res://scenes/h_slider.tscn" id="3_bqqt6"]
+[ext_resource type="AudioStream" uid="uid://pijxvgv3yx77" path="res://assets/Music/blegh.mp3" id="4_wu84c"]
+
+[sub_resource type="FontFile" id="FontFile_l6cm7"]
+cache/0/variation_coordinates = {}
+cache/0/face_index = 0
+cache/0/embolden = 0.0
+cache/0/transform = Transform2D(1, 0, 0, 1, 0, 0)
+cache/0/spacing_top = 0
+cache/0/spacing_bottom = 0
+cache/0/spacing_space = 0
+cache/0/spacing_glyph = 0
+cache/0/baseline_offset = 0.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/32/0/ascent = 0.0
+cache/0/32/0/descent = 0.0
+cache/0/32/0/underline_position = 0.0
+cache/0/32/0/underline_thickness = 0.0
+cache/0/32/0/scale = 1.0
+cache/0/64/0/ascent = 0.0
+cache/0/64/0/descent = 0.0
+cache/0/64/0/underline_position = 0.0
+cache/0/64/0/underline_thickness = 0.0
+cache/0/64/0/scale = 1.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekxnf"]
+content_margin_left = 12.0
+content_margin_top = 4.0
+content_margin_right = 12.0
+content_margin_bottom = 4.0
+bg_color = Color(0.10980392, 0.10980392, 0.10980392, 0.6)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="Main Menu" type="Control" unique_id=376278855]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekxnf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=198880827]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_l6cm7")
+expand_mode = 3
+
+[node name="Label" type="Label" parent="." unique_id=39491219]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.5
+offset_top = -131.5
+offset_right = 258.5
+offset_bottom = -44.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = SubResource("FontFile_l6cm7")
+theme_override_font_sizes/font_size = 64
+text = "Placeholder Name"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Label" unique_id=491827317]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -107.75
+offset_top = 77.0
+offset_right = 107.75
+offset_bottom = 214.0
+grow_horizontal = 2
+theme_override_constants/separation = 4
+
+[node name="New Game" type="Button" parent="Label/VBoxContainer" unique_id=1373283450]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 25
+action_mode = 0
+text = "New Game"
+
+[node name="Options" type="Button" parent="Label/VBoxContainer" unique_id=242160744]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 25
+action_mode = 0
+text = "Options"
+
+[node name="Exit" type="Button" parent="Label/VBoxContainer" unique_id=1839401719]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 25
+action_mode = 0
+text = "Exit"
+
+[node name="Optionsgrid" type="GridContainer" parent="Label" unique_id=2994796]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -97.0
+offset_top = 82.0
+offset_right = 168.0
+offset_bottom = 218.0
+grow_horizontal = 2
+columns = 2
+
+[node name="Label" type="Label" parent="Label/Optionsgrid" unique_id=1126676801]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
+text = "Fullscreen"
+
+[node name="CheckBox" type="CheckBox" parent="Label/Optionsgrid" unique_id=1101102910]
+custom_minimum_size = Vector2(43, 43)
+layout_mode = 2
+icon_alignment = 1
+expand_icon = true
+
+[node name="Volume" type="Label" parent="Label/Optionsgrid" unique_id=363693441]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
+text = "Volume"
+
+[node name="Master" parent="Label/Optionsgrid" unique_id=1125627880 instance=ExtResource("3_bqqt6")]
+layout_mode = 2
+size_flags_vertical = 4
+bus_name = "Master"
+
+[node name="Music_label" type="Label" parent="Label/Optionsgrid" unique_id=117623338]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
+text = "Music"
+
+[node name="Music" parent="Label/Optionsgrid" unique_id=1539633424 instance=ExtResource("3_bqqt6")]
+layout_mode = 2
+size_flags_vertical = 4
+bus_name = "Music"
+
+[node name="SFX_label" type="Label" parent="Label/Optionsgrid" unique_id=144362542]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxFlat_ekxnf")
+text = "Effects"
+
+[node name="SFX" parent="Label/Optionsgrid" unique_id=1491061841 instance=ExtResource("3_bqqt6")]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_vertical = 4
+bus_name = "SFX"
+
+[node name="Button" type="Button" parent="Label/Optionsgrid" unique_id=1409800837]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Back"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1541146766]
+stream = ExtResource("4_wu84c")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+
+[connection signal="pressed" from="Label/VBoxContainer/New Game" to="." method="new_game"]
+[connection signal="pressed" from="Label/VBoxContainer/Options" to="." method="options"]
+[connection signal="pressed" from="Label/VBoxContainer/Exit" to="." method="close_game"]
+[connection signal="toggled" from="Label/Optionsgrid/CheckBox" to="." method="_on_check_box_toggled"]
+[connection signal="pressed" from="Label/Optionsgrid/Button" to="." method="_on_button_pressed"]

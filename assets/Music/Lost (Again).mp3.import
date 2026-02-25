@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b2j85pfaa7hgr"
+path="res://.godot/imported/Lost (Again).mp3-0129c9c06f2bf13d9ef009dd2d12b17c.mp3str"
+
+[deps]
+
+source_file="res://assets/Music/Lost (Again).mp3"
+dest_files=["res://.godot/imported/Lost (Again).mp3-0129c9c06f2bf13d9ef009dd2d12b17c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

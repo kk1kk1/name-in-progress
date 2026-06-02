@@ -94,6 +94,7 @@ tile_map_data = PackedByteArray("AAARAAYABAAAAAEAAAARAAcABAAAAAIAAAARAAgABAAAAAM
 tile_set = ExtResource("2_w6xti")
 
 [node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=714826266]
+visible = false
 position = Vector2(-585, 432)
 energy = 1.93
 shadow_enabled = true

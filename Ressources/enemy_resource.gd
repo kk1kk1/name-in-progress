@@ -15,8 +15,12 @@ class_name enemy_type
 enum types {
 	SWORD,
 	SPEER,
-	BOW
+	BOW,
+	TRAP
 }
+
+func call_damage() -> int:
+	return damage
 
 func call_collision_damage() -> int:
 	return collision_damage

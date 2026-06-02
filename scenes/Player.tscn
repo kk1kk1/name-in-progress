@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://btuk4t1ki83yi" path="res://scripts/player.gd" id="1_v6fml"]
 [ext_resource type="Texture2D" uid="uid://b8eo4pywjpwty" path="res://assets/sprites/addons/SimpleCharacter/Girl-Sheet.png" id="3_3li8b"]
 [ext_resource type="Texture2D" uid="uid://cdniueuet04vf" path="res://assets/sprites/Walk(pre)/Walk(pre).png" id="3_mdl7e"]
+[ext_resource type="PackedScene" uid="uid://cjwqiqs014dwc" path="res://Inetractions/interacting_component.tscn" id="4_mdl7e"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t53lx"]
 radius = 22.0
@@ -506,3 +507,5 @@ anim_player = NodePath("../Animationnocvelite")
 parameters/Idle/blend_position = Vector2(0, 0)
 parameters/Walk/blend_position = Vector2(-0.499, -0.112)
 parameters/running/blend_position = Vector2(0, 0)
+
+[node name="InteractingComponent" parent="." unique_id=798306206 instance=ExtResource("4_mdl7e")]

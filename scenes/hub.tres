@@ -1,8 +1,14 @@
 [gd_resource type="TileSet" format=3 uid="uid://c227iul7ojqf5"]
 
+[ext_resource type="Texture2D" uid="uid://d0njunsye1c7f" path="res://assets/sprites/lights.png" id="1_6iffo"]
 [ext_resource type="Texture2D" uid="uid://cv70u3jp1m7qh" path="res://assets/sprites/bettershelves.png" id="2_66frl"]
 [ext_resource type="Texture2D" uid="uid://c361sderksq3y" path="res://assets/sprites/grass-wip(semifinal).png" id="2_yaxoy"]
+[ext_resource type="Texture2D" uid="uid://t3iarkx304dv" path="res://assets/sprites/tables-chairs.png" id="5_d7g2u"]
 [ext_resource type="Texture2D" uid="uid://ddre1nmv2fjp6" path="res://assets/sprites/floor(withwallsnew).png" id="5_ib57v"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yaxoy"]
+texture = ExtResource("1_6iffo")
+texture_region_size = Vector2i(60, 60)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dlysd"]
 texture = ExtResource("2_66frl")
@@ -218,6 +224,10 @@ texture_region_size = Vector2i(60, 60)
 10:4/0 = 0
 9:4/0 = 0
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ib57v"]
+texture = ExtResource("5_d7g2u")
+texture_region_size = Vector2i(60, 60)
+
 [resource]
 tile_size = Vector2i(60, 60)
 physics_layer_0/collision_layer = 1
@@ -225,3 +235,5 @@ physics_layer_0/collision_mask = 0
 sources/2 = SubResource("TileSetAtlasSource_phvbg")
 sources/1 = SubResource("TileSetAtlasSource_dlysd")
 sources/3 = SubResource("TileSetAtlasSource_66frl")
+sources/0 = SubResource("TileSetAtlasSource_yaxoy")
+sources/4 = SubResource("TileSetAtlasSource_ib57v")

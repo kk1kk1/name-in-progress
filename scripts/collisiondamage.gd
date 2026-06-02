@@ -1,8 +1,10 @@
-class_name CollisionDamage
+class_name EnemyDamage
 extends Node
 
-@export var damage: int: get = get_damage
-var enemy: Test_enemy
+@export var is_collision: bool = true
 
-func get_damage():
-	return damage
+func collision_damage():
+	return $"..".enemy_stats.call_collision_damage()
+
+func attack_damage():
+	return $"..".enemy_stats.call_damage()

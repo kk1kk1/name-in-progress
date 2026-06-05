@@ -14,9 +14,8 @@
 [ext_resource type="AudioStream" uid="uid://bj0kvil3tbuwr" path="res://assets/Music/Departure.mp3" id="12_dinhu"]
 [ext_resource type="PackedScene" uid="uid://ddldovwjpm1gh" path="res://Inetractions/chest.tscn" id="13_kvuet"]
 [ext_resource type="Script" uid="uid://dyeo11g6usx4i" path="res://scenes/opened.gd" id="14_trtic"]
-[ext_resource type="Script" uid="uid://bj1t5c0g3fv87" path="res://scenes/test_Trap.gd" id="15_ca42v"]
-[ext_resource type="Texture2D" uid="uid://dk2lf87l5pe4c" path="res://assets/sprites/addons/P_P_FREE_RPG_TILESET/decor.png" id="16_rysoc"]
-[ext_resource type="Script" uid="uid://chfpj6hoagx17" path="res://Ressources/enemy_resource.gd" id="16_ssvqc"]
+[ext_resource type="PackedScene" uid="uid://dhpoxmyj00rrt" path="res://Inetractions/trappedChest.tscn" id="15_ir15t"]
+[ext_resource type="Script" uid="uid://c5gnqhaym7mwc" path="res://scenes/trappedchest.gd" id="16_ca42v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gee14"]
 radius = 20.0
@@ -28,22 +27,6 @@ height = 40.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
 size = Vector2(35, 13)
-
-[sub_resource type="Resource" id="Resource_264po"]
-script = ExtResource("16_ssvqc")
-damage = 50
-collision_damage = 50
-metadata/_custom_type_script = "uid://chfpj6hoagx17"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_264po"]
-atlas = ExtResource("16_rysoc")
-region = Rect2(76, 8, 16, 16)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_1kice"]
-radius = 14.0
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5newe"]
-size = Vector2(16, 16)
 
 [node name="Game" type="Node2D" unique_id=1587325254]
 y_sort_enabled = true
@@ -171,33 +154,14 @@ position = Vector2(390, 50)
 [node name="Node2D" type="Node2D" parent="Chest2" unique_id=611358530]
 script = ExtResource("14_trtic")
 
-[node name="TrapChest" type="StaticBody2D" parent="." unique_id=314153082]
-position = Vector2(516, 106)
-collision_layer = 2
-collision_mask = 0
-script = ExtResource("15_ca42v")
-enemy_stats = SubResource("Resource_264po")
+[node name="TrappedChest" parent="." unique_id=1358795845 instance=ExtResource("15_ir15t")]
+position = Vector2(-175, 18)
 
-[node name="Sprite2D" type="Sprite2D" parent="TrapChest" unique_id=1328637573]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(-682, -93)
-texture = SubResource("AtlasTexture_264po")
-
-[node name="CollisionDamage" parent="TrapChest" unique_id=1399729515 instance=ExtResource("9_0tnpc")]
-position = Vector2(-682, -94)
-collision_layer = 4
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TrapChest/CollisionDamage" unique_id=135850216]
-position = Vector2(0, 1)
-shape = SubResource("CircleShape2D_1kice")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TrapChest" unique_id=1347576572]
-position = Vector2(-682, -93)
-shape = SubResource("RectangleShape2D_5newe")
+[node name="Node2D" type="Node2D" parent="TrappedChest" unique_id=1213369927]
+script = ExtResource("16_ca42v")
 
 [connection signal="dead" from="Player/Health" to="Player" method="_on_health_dead"]
 [connection signal="area_entered" from="Player/Hitbox" to="Player" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Through door" to="." method="_on_through_door_body_entered"]
 [connection signal="opened" from="Chest2" to="Chest2/Node2D" method="_on_chest_2_opened"]
+[connection signal="opened" from="TrappedChest" to="TrappedChest/Node2D" method="_on_trapped_chest_opened"]

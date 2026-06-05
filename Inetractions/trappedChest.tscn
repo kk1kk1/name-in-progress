@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://dhpoxmyj00rrt"]
+
+[ext_resource type="Script" uid="uid://cs6t22t7jp3dv" path="res://Inetractions/trapped_chest.gd" id="1_buf27"]
+[ext_resource type="Texture2D" uid="uid://dk2lf87l5pe4c" path="res://assets/sprites/addons/P_P_FREE_RPG_TILESET/decor.png" id="2_iwj3n"]
+[ext_resource type="PackedScene" uid="uid://dvcm2j4s7daag" path="res://Inetractions/interactable.tscn" id="3_cfoin"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_463nb"]
+atlas = ExtResource("2_iwj3n")
+region = Rect2(25, 4, 22, 17)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17neu"]
+atlas = ExtResource("2_iwj3n")
+region = Rect2(97, 0, 22, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aaxwm"]
+size = Vector2(22, 18)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cni4g"]
+radius = 22.0
+
+[node name="TrappedChest" type="StaticBody2D" unique_id=1358795845]
+z_index = 1
+script = ExtResource("1_buf27")
+
+[node name="ChestClosed" type="Sprite2D" parent="." unique_id=1199588359]
+texture = SubResource("AtlasTexture_463nb")
+
+[node name="ChestOpened" type="Sprite2D" parent="." unique_id=1498157686]
+visible = false
+position = Vector2(0, -4)
+texture = SubResource("AtlasTexture_17neu")
+offset = Vector2(0, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=903347521]
+shape = SubResource("RectangleShape2D_aaxwm")
+
+[node name="Interactable" parent="." unique_id=776864587 instance=ExtResource("3_cfoin")]
+interact_name = "Chest"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interactable" unique_id=1157550068]
+shape = SubResource("CircleShape2D_cni4g")

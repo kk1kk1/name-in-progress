@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cm6ajfuehgj1m"]
+[gd_scene format=3 uid="uid://cm6ajfuehgj1m"]
 
 [ext_resource type="Texture2D" uid="uid://dmspoaaxoq5qk" path="res://assets/sprites/Health Bar Asset Pack 2 by Adwit Rahman/Health Bar Asset Pack 2 by Adwit Rahman/HealthBar DARK.png" id="1_1bvlm"]
-[ext_resource type="Script" uid="uid://bgagjswrda6os" path="res://scenes/healthbar.gd" id="2_y3kqx"]
+[ext_resource type="Script" uid="uid://bgagjswrda6os" path="res://scripts/healthbar.gd" id="2_y3kqx"]
+
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y3kqx"]
 atlas = ExtResource("1_1bvlm")

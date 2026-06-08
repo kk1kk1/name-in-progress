@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://wdb4yyuldd3p"]
 
-[ext_resource type="Script" uid="uid://bglgrj5plbh1k" path="res://scenes/hub.gd" id="1_w6xti"]
+[ext_resource type="Script" uid="uid://bglgrj5plbh1k" path="res://scripts/hub.gd" id="1_w6xti"]
 [ext_resource type="PackedScene" uid="uid://cmchiubak8lll" path="res://scenes/Player.tscn" id="2_d1od2"]
 [ext_resource type="TileSet" uid="uid://c227iul7ojqf5" path="res://scenes/hub.tres" id="2_w6xti"]
 [ext_resource type="AudioStream" uid="uid://inm2mdluadjg" path="res://assets/Music/Sili you slut wake up.mp3" id="4_7wvbm"]

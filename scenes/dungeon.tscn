@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://b6waxssff5wu5"]
 
 [ext_resource type="PackedScene" uid="uid://cmchiubak8lll" path="res://scenes/Player.tscn" id="1_ubp1v"]
-[ext_resource type="Script" uid="uid://dvp43gwtmionc" path="res://scenes/dungeon.gd" id="1_ys5p8"]
+[ext_resource type="Script" uid="uid://dvp43gwtmionc" path="res://scripts/dungeon.gd" id="1_ys5p8"]
 [ext_resource type="TileSet" uid="uid://3ooi4fbwk4np" path="res://scenes/Map.tres" id="2_c4wp1"]
 [ext_resource type="Texture2D" uid="uid://bbqytpklmsdqk" path="res://assets/sprites/addons/P_P_FREE_RPG_TILESET/Island_24x24.png" id="3_fvacq"]
 [ext_resource type="Texture2D" uid="uid://dk2lf87l5pe4c" path="res://assets/sprites/addons/P_P_FREE_RPG_TILESET/decor.png" id="4_ys5p8"]

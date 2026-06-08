@@ -1,6 +1,6 @@
 [gd_scene format=4 uid="uid://8c84nk83u1q4"]
 
-[ext_resource type="Script" uid="uid://b7p4jni1i8vdf" path="res://scenes/game.gd" id="1_0tnpc"]
+[ext_resource type="Script" uid="uid://b7p4jni1i8vdf" path="res://scripts/game.gd" id="1_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://cmchiubak8lll" path="res://scenes/Player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://crwsmcvkttvqj" path="res://scripts/player_health.gd" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://qtblo04hvwsg" path="res://scenes/hitbox.tscn" id="3_gee14"]
@@ -12,10 +12,9 @@
 [ext_resource type="PackedScene" uid="uid://cm6ajfuehgj1m" path="res://scenes/health_bar.tscn" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://4e00qh32c72g" path="res://assets/sprites/Tiny Swords (Free Pack)/Buildings/Black Buildings/Castle.png" id="11_kvpfn"]
 [ext_resource type="AudioStream" uid="uid://bj0kvil3tbuwr" path="res://assets/Music/Departure.mp3" id="12_dinhu"]
-[ext_resource type="PackedScene" uid="uid://ddldovwjpm1gh" path="res://Inetractions/chest.tscn" id="13_kvuet"]
-[ext_resource type="Script" uid="uid://dyeo11g6usx4i" path="res://scenes/opened.gd" id="14_trtic"]
+[ext_resource type="Script" uid="uid://bk0gampjg0smp" path="res://Ressources/chest_resource.gd" id="14_rysoc"]
 [ext_resource type="PackedScene" uid="uid://dhpoxmyj00rrt" path="res://Inetractions/trappedChest.tscn" id="15_ir15t"]
-[ext_resource type="Script" uid="uid://c5gnqhaym7mwc" path="res://scenes/trappedchest.gd" id="16_ca42v"]
+[ext_resource type="PackedScene" uid="uid://ced7fmhfw7vwn" path="res://scenes/trapped_chest_opened.tscn" id="16_ca42v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gee14"]
 radius = 20.0
@@ -27,6 +26,34 @@ height = 40.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
 size = Vector2(35, 13)
+
+[sub_resource type="Resource" id="Resource_rysoc"]
+script = ExtResource("14_rysoc")
+damage = 20
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_264po"]
+script = ExtResource("14_rysoc")
+type = 1
+damage = 30
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_1kice"]
+script = ExtResource("14_rysoc")
+type = 2
+damage = 40
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_5newe"]
+script = ExtResource("14_rysoc")
+type = 3
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_37s47"]
+script = ExtResource("14_rysoc")
+type = 4
+damage = 40
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
 
 [node name="Game" type="Node2D" unique_id=1587325254]
 y_sort_enabled = true
@@ -141,27 +168,36 @@ autoplay = true
 bus = &"Music"
 parameters/looping = true
 
-[node name="Chest" parent="." unique_id=1093878993 instance=ExtResource("13_kvuet")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(-80, -26)
-
-[node name="Chest2" parent="." unique_id=1696843443 instance=ExtResource("13_kvuet")]
-z_index = 1
-y_sort_enabled = true
-position = Vector2(390, 50)
-
-[node name="Node2D" type="Node2D" parent="Chest2" unique_id=611358530]
-script = ExtResource("14_trtic")
-
 [node name="TrappedChest" parent="." unique_id=1358795845 instance=ExtResource("15_ir15t")]
-position = Vector2(-175, 18)
+position = Vector2(-156, -4)
+chest_contents = SubResource("Resource_rysoc")
 
-[node name="Node2D" type="Node2D" parent="TrappedChest" unique_id=1213369927]
-script = ExtResource("16_ca42v")
+[node name="TrappedChestOpened" parent="TrappedChest" unique_id=1559974270 instance=ExtResource("16_ca42v")]
+
+[node name="TrappedChest2" parent="." unique_id=356384001 instance=ExtResource("15_ir15t")]
+position = Vector2(-155, 39)
+chest_contents = SubResource("Resource_264po")
+
+[node name="TrappedChestOpened" parent="TrappedChest2" unique_id=1238155637 instance=ExtResource("16_ca42v")]
+
+[node name="TrappedChest3" parent="." unique_id=446516829 instance=ExtResource("15_ir15t")]
+position = Vector2(-154, 82)
+chest_contents = SubResource("Resource_1kice")
+
+[node name="TrappedChestOpened" parent="TrappedChest3" unique_id=1886352923 instance=ExtResource("16_ca42v")]
+
+[node name="TrappedChest4" parent="." unique_id=750714326 instance=ExtResource("15_ir15t")]
+position = Vector2(-130, 119)
+chest_contents = SubResource("Resource_5newe")
+
+[node name="TrappedChestOpened" parent="TrappedChest4" unique_id=1334079004 instance=ExtResource("16_ca42v")]
+
+[node name="TrappedChest5" parent="." unique_id=1498406972 instance=ExtResource("15_ir15t")]
+position = Vector2(-84, 119)
+chest_contents = SubResource("Resource_37s47")
+
+[node name="TrappedChestOpened" parent="TrappedChest5" unique_id=328317530 instance=ExtResource("16_ca42v")]
 
 [connection signal="dead" from="Player/Health" to="Player" method="_on_health_dead"]
 [connection signal="area_entered" from="Player/Hitbox" to="Player" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Through door" to="." method="_on_through_door_body_entered"]
-[connection signal="opened" from="Chest2" to="Chest2/Node2D" method="_on_chest_2_opened"]
-[connection signal="opened" from="TrappedChest" to="TrappedChest/Node2D" method="_on_trapped_chest_opened"]

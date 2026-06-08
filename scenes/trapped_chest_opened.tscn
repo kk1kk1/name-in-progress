@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://ced7fmhfw7vwn"]
+
+[ext_resource type="Script" uid="uid://c5gnqhaym7mwc" path="res://scripts/trapped_chest_opened.gd" id="1_8xjdf"]
+
+[node name="TrappedChestOpened" type="Node2D" unique_id=1559974270]
+script = ExtResource("1_8xjdf")

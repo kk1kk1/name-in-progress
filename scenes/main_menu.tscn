@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://qlravh6mkdjw"]
 
-[ext_resource type="Script" uid="uid://e3sat5gqg5e5" path="res://scenes/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Script" uid="uid://e3sat5gqg5e5" path="res://scripts/main_menu.gd" id="1_ekxnf"]
 [ext_resource type="Texture2D" uid="uid://dwer2n07lterh" path="res://assets/images/21967857-forest-6578551_1920.jpg" id="1_l6cm7"]
 [ext_resource type="PackedScene" uid="uid://dryqw021l1kyg" path="res://scenes/h_slider.tscn" id="3_bqqt6"]
 [ext_resource type="AudioStream" uid="uid://pijxvgv3yx77" path="res://assets/Music/blegh.mp3" id="4_wu84c"]

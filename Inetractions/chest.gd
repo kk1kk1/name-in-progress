@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var chest_contents: chest_resource
+@export var chest_contents: Chest_Resource
 @onready var interactable: Area2D = $Interactable
 @onready var chest_closed: Sprite2D = $ChestClosed
 @onready var chest_opened: Sprite2D = $ChestOpened
@@ -13,5 +13,6 @@ func _on_interact():
 	if chest_closed.visible:
 		chest_closed.hide()
 		chest_opened.show()
+		self.collision_layer = 1
 		interactable.is_interactable = false
 		emit_signal("opened")

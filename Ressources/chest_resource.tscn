@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://tkidabf63k3x"]
 
-[ext_resource type="Script" uid="uid://bk0gampjg0smp" path="res://Ressources/chest_resource.gd" id="1_68lb4"]
+[ext_resource type="Script" uid="uid://bk0gampjg0smp" path="res://Ressources/Chest_Resource.gd" id="1_68lb4"]
 
 [node name="chest_resource" type="Node" unique_id=2101035622]
 script = ExtResource("1_68lb4")

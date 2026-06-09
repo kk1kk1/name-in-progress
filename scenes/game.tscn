@@ -12,13 +12,101 @@
 [ext_resource type="PackedScene" uid="uid://cm6ajfuehgj1m" path="res://scenes/health_bar.tscn" id="10_vtaks"]
 [ext_resource type="Texture2D" uid="uid://4e00qh32c72g" path="res://assets/sprites/Tiny Swords (Free Pack)/Buildings/Black Buildings/Castle.png" id="11_kvpfn"]
 [ext_resource type="AudioStream" uid="uid://bj0kvil3tbuwr" path="res://assets/Music/Departure.mp3" id="12_dinhu"]
-[ext_resource type="Script" uid="uid://bk0gampjg0smp" path="res://Ressources/chest_resource.gd" id="14_rysoc"]
-[ext_resource type="PackedScene" uid="uid://dhpoxmyj00rrt" path="res://Inetractions/trappedChest.tscn" id="15_ir15t"]
-[ext_resource type="PackedScene" uid="uid://ced7fmhfw7vwn" path="res://scenes/trapped_chest_opened.tscn" id="16_ca42v"]
+[ext_resource type="Script" uid="uid://obton2xw8lot" path="res://Ressources/Buff_Resource.gd" id="14_ir15t"]
+[ext_resource type="Script" uid="uid://bk0gampjg0smp" path="res://Ressources/Chest_Resource.gd" id="14_rysoc"]
+[ext_resource type="PackedScene" uid="uid://dhpoxmyj00rrt" path="res://Inetractions/Chest.tscn" id="15_ir15t"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gee14"]
 radius = 20.0
 height = 123.99991
+
+[sub_resource type="Resource" id="Resource_ir15t"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_ir15t"
+resource_scene_unique_id = "Resource_ir15t"
+script = ExtResource("14_ir15t")
+bufftype = 1
+damage_mult = 2.0
+health_mult = 2.0
+metadata/_custom_type_script = "uid://obton2xw8lot"
+
+[sub_resource type="Resource" id="Resource_264po"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_264po"
+resource_scene_unique_id = "Resource_264po"
+script = ExtResource("14_rysoc")
+buff = SubResource("Resource_ir15t")
+buff_time = 10
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_1kice"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_1kice"
+resource_scene_unique_id = "Resource_1kice"
+script = ExtResource("14_ir15t")
+bufftype = 1
+damage_mult = 3.0
+health_mult = 3.0
+metadata/_custom_type_script = "uid://obton2xw8lot"
+
+[sub_resource type="Resource" id="Resource_5newe"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_5newe"
+resource_scene_unique_id = "Resource_5newe"
+script = ExtResource("14_rysoc")
+damage = 50
+buff = SubResource("Resource_1kice")
+invul_state = null
+buff_time = null
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_37s47"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_37s47"
+resource_scene_unique_id = "Resource_37s47"
+script = ExtResource("14_ir15t")
+bufftype = 2
+invul_state = true
+invul_time = 10
+metadata/_custom_type_script = "uid://obton2xw8lot"
+
+[sub_resource type="Resource" id="Resource_ca42v"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_ca42v"
+resource_scene_unique_id = "Resource_ca42v"
+script = ExtResource("14_rysoc")
+buff = SubResource("Resource_37s47")
+invul_state = null
+buff_time = null
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_bt5mj"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_bt5mj"
+resource_scene_unique_id = "Resource_bt5mj"
+script = ExtResource("14_ir15t")
+metadata/_custom_type_script = "uid://obton2xw8lot"
+
+[sub_resource type="Resource" id="Resource_rysoc"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_rysoc"
+resource_scene_unique_id = "Resource_rysoc"
+script = ExtResource("14_rysoc")
+buff = SubResource("Resource_bt5mj")
+invul_state = null
+buff_time = null
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_ssvqc"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_ssvqc"
+resource_scene_unique_id = "Resource_ssvqc"
+script = ExtResource("14_rysoc")
+type = 4
+healing = 150
+invul_state = null
+buff_time = null
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtaks"]
 radius = 16.0
@@ -26,34 +114,6 @@ height = 40.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvpfn"]
 size = Vector2(35, 13)
-
-[sub_resource type="Resource" id="Resource_rysoc"]
-script = ExtResource("14_rysoc")
-damage = 20
-metadata/_custom_type_script = "uid://bk0gampjg0smp"
-
-[sub_resource type="Resource" id="Resource_264po"]
-script = ExtResource("14_rysoc")
-type = 1
-damage = 30
-metadata/_custom_type_script = "uid://bk0gampjg0smp"
-
-[sub_resource type="Resource" id="Resource_1kice"]
-script = ExtResource("14_rysoc")
-type = 2
-damage = 40
-metadata/_custom_type_script = "uid://bk0gampjg0smp"
-
-[sub_resource type="Resource" id="Resource_5newe"]
-script = ExtResource("14_rysoc")
-type = 3
-metadata/_custom_type_script = "uid://bk0gampjg0smp"
-
-[sub_resource type="Resource" id="Resource_37s47"]
-script = ExtResource("14_rysoc")
-type = 4
-damage = 40
-metadata/_custom_type_script = "uid://bk0gampjg0smp"
 
 [node name="Game" type="Node2D" unique_id=1587325254]
 y_sort_enabled = true
@@ -103,6 +163,30 @@ z_index = 1
 y_sort_enabled = true
 tile_map_data = PackedByteArray("AAADAAAAAQADAAMAAAD9/wEAAQADAAMAAAD9//v/AQADAAMAAAAEAPj/AQADAAMAAAABAPz/AQADAAMAAAD1//f/AQADAAMAAAD6//j/AQADAAMAAAD2/wIAAQADAAMAAAD4//7/AQADAAMAAAD1//7/AQADAAMAAAD4/wQAAQADAAMAAAALAAEAAQADAAMAAAAPAAEAAQADAAMAAAAGAAEAAQADAAMAAAAXAAEAAQADAAMAAAAIAAAAAQAGAAAAAAARAP//AQAGAAAAAAAXAAQAAQAGAAAAAAAAAAEAAQAGAAAAAAD9//7/AQAGAAAAAAD3//j/AQAGAAAAAAD8/wIAAQADAAIAAAATAAUAAQABAAIAAAABAAUAAQABAAIAAAD7/wUAAQABAAIAAAD4/wEAAQABAAIAAAD1//n/AQABAAIAAAD+//n/AQABAAIAAAD///7/AQAFAAEAAAD1//v/AQAFAAEAAAAAAPj/AQAFAAEAAAAEAP3/AQAFAAEAAAD//wIAAQAFAAEAAAANAAIAAQAFAAEAAAAWAAUAAQAFAAEAAAASAAEAAQADAAMAAAAXAP//AQAFAAAAAAATAP//AQAFAAAAAAA=")
 tile_set = ExtResource("8_gee14")
+
+[node name="Interactables" type="Node2D" parent="Map" unique_id=1044610110]
+position = Vector2(1, 0)
+
+[node name="Chest" parent="Map/Interactables" unique_id=1358795845 instance=ExtResource("15_ir15t")]
+position = Vector2(-34, 139)
+chest_contents = SubResource("Resource_264po")
+
+[node name="Chest2" parent="Map/Interactables" unique_id=356384001 instance=ExtResource("15_ir15t")]
+position = Vector2(-81, 137)
+chest_contents = SubResource("Resource_5newe")
+
+[node name="Chest3" parent="Map/Interactables" unique_id=446516829 instance=ExtResource("15_ir15t")]
+y_sort_enabled = true
+position = Vector2(-117, 119)
+chest_contents = SubResource("Resource_ca42v")
+
+[node name="Chest4" parent="Map/Interactables" unique_id=750714326 instance=ExtResource("15_ir15t")]
+position = Vector2(-158, 125)
+chest_contents = SubResource("Resource_rysoc")
+
+[node name="Chest5" parent="Map/Interactables" unique_id=1498406972 instance=ExtResource("15_ir15t")]
+position = Vector2(12, 138)
+chest_contents = SubResource("Resource_ssvqc")
 
 [node name="test_mob" parent="." unique_id=1923171350 instance=ExtResource("6_p57ef")]
 z_index = 1
@@ -155,48 +239,11 @@ position = Vector2(518, -45)
 position = Vector2(-1, 10)
 shape = SubResource("RectangleShape2D_kvpfn")
 
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="." unique_id=69697923]
-visible = false
-position = Vector2(-482, 19.000015)
-rotation = -2.509434
-energy = 0.4
-shadow_enabled = true
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=833980342]
 stream = ExtResource("12_dinhu")
 autoplay = true
 bus = &"Music"
 parameters/looping = true
-
-[node name="TrappedChest" parent="." unique_id=1358795845 instance=ExtResource("15_ir15t")]
-position = Vector2(-156, -4)
-chest_contents = SubResource("Resource_rysoc")
-
-[node name="TrappedChestOpened" parent="TrappedChest" unique_id=1559974270 instance=ExtResource("16_ca42v")]
-
-[node name="TrappedChest2" parent="." unique_id=356384001 instance=ExtResource("15_ir15t")]
-position = Vector2(-155, 39)
-chest_contents = SubResource("Resource_264po")
-
-[node name="TrappedChestOpened" parent="TrappedChest2" unique_id=1238155637 instance=ExtResource("16_ca42v")]
-
-[node name="TrappedChest3" parent="." unique_id=446516829 instance=ExtResource("15_ir15t")]
-position = Vector2(-154, 82)
-chest_contents = SubResource("Resource_1kice")
-
-[node name="TrappedChestOpened" parent="TrappedChest3" unique_id=1886352923 instance=ExtResource("16_ca42v")]
-
-[node name="TrappedChest4" parent="." unique_id=750714326 instance=ExtResource("15_ir15t")]
-position = Vector2(-130, 119)
-chest_contents = SubResource("Resource_5newe")
-
-[node name="TrappedChestOpened" parent="TrappedChest4" unique_id=1334079004 instance=ExtResource("16_ca42v")]
-
-[node name="TrappedChest5" parent="." unique_id=1498406972 instance=ExtResource("15_ir15t")]
-position = Vector2(-84, 119)
-chest_contents = SubResource("Resource_37s47")
-
-[node name="TrappedChestOpened" parent="TrappedChest5" unique_id=328317530 instance=ExtResource("16_ca42v")]
 
 [connection signal="dead" from="Player/Health" to="Player" method="_on_health_dead"]
 [connection signal="area_entered" from="Player/Hitbox" to="Player" method="_on_hitbox_area_entered"]

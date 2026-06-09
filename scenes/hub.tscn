@@ -47,7 +47,7 @@ offset_bottom = 2058.0
 texture = SubResource("CurveXYZTexture_441x5")
 
 [node name="Player" parent="." unique_id=2037615926 instance=ExtResource("2_d1od2")]
-position = Vector2(-394, -392)
+position = Vector2(-458, -791)
 collision_mask = 1
 zoom = Vector2(1, 1)
 SPEED = 200
@@ -55,6 +55,7 @@ RUNSPEED = 300
 
 [node name="326582Max" type="Sprite2D" parent="." unique_id=2145941107]
 visible = false
+y_sort_enabled = true
 position = Vector2(1651, -1424)
 rotation = -1.5707964
 scale = Vector2(5, 5)

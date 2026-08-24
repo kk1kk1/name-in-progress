@@ -6,7 +6,7 @@
 Time to start working
 
 # Assets #
-The following assets were used in the making of this game.
+The following assets were used in the making of this game. (really need to fill this out at some point)
 
 ## 2D Models ##
 

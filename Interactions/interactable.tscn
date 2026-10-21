@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dvcm2j4s7daag"]
 
-[ext_resource type="Script" uid="uid://dnhrafkgn5asn" path="res://Inetractions/interactable.gd" id="1_6w4xx"]
+[ext_resource type="Script" uid="uid://dnhrafkgn5asn" path="res://Interactions/interactable.gd" id="1_6w4xx"]
 
 [node name="Interactable" type="Area2D" unique_id=776864587]
 collision_layer = 8

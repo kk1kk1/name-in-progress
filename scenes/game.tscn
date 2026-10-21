@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cmchiubak8lll" path="res://scenes/Player.tscn" id="1_uwrxv"]
 [ext_resource type="Script" uid="uid://crwsmcvkttvqj" path="res://scripts/player_health.gd" id="2_u5sy4"]
 [ext_resource type="PackedScene" uid="uid://qtblo04hvwsg" path="res://scenes/hitbox.tscn" id="3_gee14"]
+[ext_resource type="Script" uid="uid://bm2friwmd26mh" path="res://Ressources/Health_Resource.gd" id="4_ca42v"]
 [ext_resource type="PackedScene" uid="uid://b8ssgo32jqumd" path="res://scenes/test_mob.tscn" id="6_p57ef"]
 [ext_resource type="Script" uid="uid://28ufuec4y5j7" path="res://scripts/test_mob.gd" id="7_vtaks"]
 [ext_resource type="TileSet" uid="uid://3ooi4fbwk4np" path="res://scenes/Map.tres" id="8_gee14"]
@@ -14,7 +15,11 @@
 [ext_resource type="AudioStream" uid="uid://bj0kvil3tbuwr" path="res://assets/Music/Departure.mp3" id="12_dinhu"]
 [ext_resource type="Script" uid="uid://obton2xw8lot" path="res://Ressources/Buff_Resource.gd" id="14_ir15t"]
 [ext_resource type="Script" uid="uid://bk0gampjg0smp" path="res://Ressources/Chest_Resource.gd" id="14_rysoc"]
-[ext_resource type="PackedScene" uid="uid://dhpoxmyj00rrt" path="res://Inetractions/Chest.tscn" id="15_ir15t"]
+[ext_resource type="PackedScene" uid="uid://dhpoxmyj00rrt" path="res://Interactions/Chest.tscn" id="15_ir15t"]
+
+[sub_resource type="Resource" id="Resource_pl11u"]
+script = ExtResource("4_ca42v")
+metadata/_custom_type_script = "uid://bm2friwmd26mh"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gee14"]
 radius = 20.0
@@ -25,9 +30,9 @@ Resource = null
 resource_path = "res://scenes/game.tscn::Resource_ir15t"
 resource_scene_unique_id = "Resource_ir15t"
 script = ExtResource("14_ir15t")
-bufftype = 1
+bufftype = 2
 damage_mult = 2.0
-health_mult = 2.0
+health_mult = 3.0
 metadata/_custom_type_script = "uid://obton2xw8lot"
 
 [sub_resource type="Resource" id="Resource_264po"]
@@ -44,9 +49,10 @@ Resource = null
 resource_path = "res://scenes/game.tscn::Resource_1kice"
 resource_scene_unique_id = "Resource_1kice"
 script = ExtResource("14_ir15t")
-bufftype = 1
+bufftype = 3
 damage_mult = 3.0
-health_mult = 3.0
+health_mult = 2.0
+health_mult_time = 5.0
 metadata/_custom_type_script = "uid://obton2xw8lot"
 
 [sub_resource type="Resource" id="Resource_5newe"]
@@ -56,8 +62,6 @@ resource_scene_unique_id = "Resource_5newe"
 script = ExtResource("14_rysoc")
 damage = 50
 buff = SubResource("Resource_1kice")
-invul_state = null
-buff_time = null
 metadata/_custom_type_script = "uid://bk0gampjg0smp"
 
 [sub_resource type="Resource" id="Resource_37s47"]
@@ -67,7 +71,7 @@ resource_scene_unique_id = "Resource_37s47"
 script = ExtResource("14_ir15t")
 bufftype = 2
 invul_state = true
-invul_time = 10
+invul_time = 10.0
 metadata/_custom_type_script = "uid://obton2xw8lot"
 
 [sub_resource type="Resource" id="Resource_ca42v"]
@@ -76,8 +80,6 @@ resource_path = "res://scenes/game.tscn::Resource_ca42v"
 resource_scene_unique_id = "Resource_ca42v"
 script = ExtResource("14_rysoc")
 buff = SubResource("Resource_37s47")
-invul_state = null
-buff_time = null
 metadata/_custom_type_script = "uid://bk0gampjg0smp"
 
 [sub_resource type="Resource" id="Resource_bt5mj"]
@@ -93,19 +95,47 @@ resource_path = "res://scenes/game.tscn::Resource_rysoc"
 resource_scene_unique_id = "Resource_rysoc"
 script = ExtResource("14_rysoc")
 buff = SubResource("Resource_bt5mj")
-invul_state = null
-buff_time = null
 metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_e1j6l"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_e1j6l"
+resource_scene_unique_id = "Resource_e1j6l"
+script = ExtResource("14_ir15t")
+bufftype = 4
+invul_state = true
+invul_time = 10.0
 
 [sub_resource type="Resource" id="Resource_ssvqc"]
 Resource = null
 resource_path = "res://scenes/game.tscn::Resource_ssvqc"
 resource_scene_unique_id = "Resource_ssvqc"
 script = ExtResource("14_rysoc")
-type = 4
+type = 1
+damage = 50
+buff = SubResource("Resource_e1j6l")
 healing = 150
-invul_state = null
-buff_time = null
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_bhx41"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_bhx41"
+resource_scene_unique_id = "Resource_bhx41"
+script = ExtResource("14_rysoc")
+type = 1
+damage = 25
+buff = SubResource("Resource_e1j6l")
+healing = 150
+metadata/_custom_type_script = "uid://bk0gampjg0smp"
+
+[sub_resource type="Resource" id="Resource_qnb83"]
+Resource = null
+resource_path = "res://scenes/game.tscn::Resource_qnb83"
+resource_scene_unique_id = "Resource_qnb83"
+script = ExtResource("14_rysoc")
+damage = 25
+buff = SubResource("Resource_e1j6l")
+healing = 150
 metadata/_custom_type_script = "uid://bk0gampjg0smp"
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vtaks"]
@@ -133,7 +163,8 @@ RUNSPEED = 120
 
 [node name="Health" type="Node" parent="Player" unique_id=1156883732]
 script = ExtResource("2_u5sy4")
-max_health = 100
+health_res = SubResource("Resource_pl11u")
+_max_health = 100
 metadata/_custom_type_script = "uid://crwsmcvkttvqj"
 
 [node name="Hitbox" parent="Player" unique_id=867200899 node_paths=PackedStringArray("health") instance=ExtResource("3_gee14")]
@@ -187,6 +218,14 @@ chest_contents = SubResource("Resource_rysoc")
 [node name="Chest5" parent="Map/Interactables" unique_id=1498406972 instance=ExtResource("15_ir15t")]
 position = Vector2(12, 138)
 chest_contents = SubResource("Resource_ssvqc")
+
+[node name="Chest6" parent="Map/Interactables" unique_id=306150679 instance=ExtResource("15_ir15t")]
+position = Vector2(435, 139)
+chest_contents = SubResource("Resource_bhx41")
+
+[node name="Chest7" parent="Map/Interactables" unique_id=1099008706 instance=ExtResource("15_ir15t")]
+position = Vector2(460, 55)
+chest_contents = SubResource("Resource_qnb83")
 
 [node name="test_mob" parent="." unique_id=1923171350 instance=ExtResource("6_p57ef")]
 z_index = 1
@@ -245,6 +284,5 @@ autoplay = true
 bus = &"Music"
 parameters/looping = true
 
-[connection signal="dead" from="Player/Health" to="Player" method="_on_health_dead"]
 [connection signal="area_entered" from="Player/Hitbox" to="Player" method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="Through door" to="." method="_on_through_door_body_entered"]

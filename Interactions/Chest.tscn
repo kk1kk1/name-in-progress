@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dhpoxmyj00rrt"]
 
-[ext_resource type="Script" uid="uid://cs6t22t7jp3dv" path="res://Inetractions/chest.gd" id="1_buf27"]
+[ext_resource type="Script" uid="uid://cs6t22t7jp3dv" path="res://Interactions/chest.gd" id="1_buf27"]
 [ext_resource type="Texture2D" uid="uid://dk2lf87l5pe4c" path="res://assets/sprites/addons/P_P_FREE_RPG_TILESET/decor.png" id="2_iwj3n"]
-[ext_resource type="PackedScene" uid="uid://dvcm2j4s7daag" path="res://Inetractions/interactable.tscn" id="3_cfoin"]
+[ext_resource type="PackedScene" uid="uid://dvcm2j4s7daag" path="res://Interactions/interactable.tscn" id="3_cfoin"]
 [ext_resource type="PackedScene" uid="uid://ced7fmhfw7vwn" path="res://scenes/trapped_chest_opened.tscn" id="4_2o7uj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_463nb"]

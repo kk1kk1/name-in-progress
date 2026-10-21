@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cjwqiqs014dwc"]
 
-[ext_resource type="Script" uid="uid://5uv5mg1ny8sk" path="res://Inetractions/interacting_component.gd" id="1_y0srk"]
+[ext_resource type="Script" uid="uid://5uv5mg1ny8sk" path="res://Interactions/interacting_component.gd" id="1_y0srk"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_y0srk"]
 radius = 22.0
